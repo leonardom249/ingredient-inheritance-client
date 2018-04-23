@@ -1,7 +1,16 @@
 import React from 'react';
+import { toggleInstructionsOn } from '../actions/actions';
+import {connect} from 'react-redux';
 
-export default function Button (){
+
+function Button(props){
+    
     return(
-        <button>Instructions</button>
+        <button
+            onClick={()=> props.dispatch(toggleInstructionsOn())}
+        >
+        Instructions</button>
     )
+ 
 }
+export default connect()(Button)

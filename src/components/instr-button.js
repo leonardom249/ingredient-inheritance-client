@@ -1,8 +1,13 @@
 import React from 'react';
+import { toggleInstructionsOff } from '../actions/actions';
+import {connect} from 'react-redux';
 
-
-export default function InstructionButton(){
+function InstructionButton(props){
     return(
-        <button>Back To Recipes</button>
+        <button
+            onClick={()=> props.dispatch(toggleInstructionsOff())}
+        >
+        Back To Recipes</button>
     )
 }
+export default connect()(InstructionButton)

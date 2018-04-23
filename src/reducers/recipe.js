@@ -1,4 +1,10 @@
-import {FETCH_RECIPE_SUCCESS, FETCH_RECIPE_REQUEST, FETCH_RECIPE_ERROR, ADD_RECIPE} from '../actions/actions';
+import {FETCH_RECIPE_SUCCESS,
+   FETCH_RECIPE_REQUEST, 
+   FETCH_RECIPE_ERROR, 
+   ADD_RECIPE, 
+   TOGGLE_INSTRUCTIONS_ON,
+   TOGGLE_INSTRUCTIONS_OFF
+  } from '../actions/actions';
 
 
 const initialState={
@@ -32,6 +38,20 @@ export default (state=initialState, action) =>{
       recipes:[...state.recipes, action.recipe],
       error: null,
       loading: false
+    })
+  }
+  else if(action.type === TOGGLE_INSTRUCTIONS_ON){
+    return Object.assign({}, state, {
+      error: null,
+      loading: false,
+      instructions: true
+    })
+  }
+  else if(action.type === TOGGLE_INSTRUCTIONS_OFF){
+    return Object.assign({}, state, {
+      error: null,
+      loading: false,
+      instructions: false
     })
   }
     return state;

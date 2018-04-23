@@ -23,6 +23,16 @@ export const addrecipe=(recipe)=>({
     recipe
 })
 
+export const TOGGLE_INSTRUCTIONS_ON='TOGGLE_INSTRUCTIONS_ON'
+export const toggleInstructionsOn=()=>({
+    type:TOGGLE_INSTRUCTIONS_ON,
+})
+
+export const TOGGLE_INSTRUCTIONS_OFF='TOGGLE_INSTRUCTIONS_OFF'
+export const toggleInstructionsOff=()=>({
+    type:TOGGLE_INSTRUCTIONS_OFF,
+})
+
 
 export const fetchrecipes =()=>dispatch=>{
     dispatch(fetchrecipeRequest());

@@ -4,25 +4,40 @@ import AddRecipeForm from './components/form';
 import Header from './components/header';
 import Button from './components/button';
 import Instructions from './components/instructions';
+import {connect} from 'react-redux';
 
 
 
 
 
-export default class App extends Component {
+
+class App extends Component {
   render() {
-    return (
-      <div className="App">
-        <Instructions/>
-        {/* <Header/>
-        <Button/>
-        <AddRecipeForm />
-        <RecipeList /> */}
-      </div>
-    );
+      if(this.props.instructions === true){
+        return ( 
+          <div className='instructions'>
+            <Instructions/>
+          </div>
+        )
+      }
+      else if (this.props.instructions === false){
+      return(
+          <div className="App">
+          <Header/>
+          <Button/>
+          <AddRecipeForm />
+          <RecipeList />
+        </div>
+      );
+    }
   }
 }
 
+const mapStateToProps = (state) =>({
+  instructions: state.auth.instructions
+})
+
+export default connect(mapStateToProps)(App)
 
  
 
