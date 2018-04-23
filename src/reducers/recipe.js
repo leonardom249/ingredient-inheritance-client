@@ -3,6 +3,7 @@ import {FETCH_RECIPE_SUCCESS, FETCH_RECIPE_REQUEST, FETCH_RECIPE_ERROR, ADD_RECI
 
 const initialState={
   recipes:[],
+  instructions: false,
   loading: false,
   error: null
 };

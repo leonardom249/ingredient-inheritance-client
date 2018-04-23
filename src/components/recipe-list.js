@@ -16,6 +16,7 @@ class recipeList extends React.Component{
     })
         return(
             <div>
+                <h4>My Family Recipes</h4>
                 <ul>
                     {recipeList}
                 </ul>
