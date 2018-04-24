@@ -1,45 +1,24 @@
 import React, { Component } from 'react';
-import RecipeList from './components/recipe-list';
-import AddRecipeForm from './components/form';
-import Header from './components/header';
-import Button from './components/button';
-import Instructions from './components/instructions';
 import LoginForm from './components/login';
+import MainPage from './components/main-page';
+import HomeLoginPage from './components/home-login-page';
+import {Route, withRouter} from 'react-router-dom';
 import {connect} from 'react-redux';
-
-
 
 
 
 
 class App extends Component {
   render() {
-    //   if(this.props.instructions === true){
-    //     return ( 
-    //       <div className='instructions'>
-    //         <Instructions/>
-    //       </div>
-    //     )
-    //   }
-    //   else if (this.props.instructions === false){
-    //   return(
-    //       <div className="App">
-    //       <Header/>
-    //       <Button/>
-    //       <AddRecipeForm />
-    //       <RecipeList />
-    //     </div>
-    //   );
-    // }
-    return(<div><LoginForm/></div>)
+    return(
+      <div className="full-app">
+        <Route exact path='/' component={HomeLoginPage} />
+        <Route exact path='/mainpage' component={MainPage}/>
+      </div>
+    )
   }
 }
 
-const mapStateToProps = (state) =>({
-  instructions: state.recipe.instructions
-})
 
-export default connect(mapStateToProps)(App)
 
- 
-
+export default withRouter(connect()(App));

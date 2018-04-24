@@ -1,4 +1,5 @@
 import React from 'react';
+import {BrowserRouter, Route} from 'react-router-dom';
 import ReactDOM from 'react-dom';
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
@@ -7,8 +8,10 @@ import store from './store';
 
 
 
-ReactDOM.render(
+ReactDOM.render((
     <Provider store={store}>
-        <App />
-    </Provider>, document.getElementById('root'));
+        <BrowserRouter>
+            <Route path='/' component={App} />
+        </BrowserRouter>
+</Provider>), document.getElementById('root'));
 registerServiceWorker();

@@ -10,6 +10,7 @@ import {
 
 const initialState = {
     authToken: null, 
+    currentUser: null,
     loading: false,
     error: null,
     // dialogAlert: false,
@@ -41,7 +42,8 @@ export default function reducer(state = initialState, action) {
             loading: false,
             error: action.error
         });
-    // }else if (action.type === ALMOST_TIMEOUT) {
+     }
+    //else if (action.type === ALMOST_TIMEOUT) {
     //     return Object.assign({}, state, {
     //         dialogAlert: true
     //     });

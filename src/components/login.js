@@ -3,7 +3,7 @@ import {Field, reduxForm, focus} from 'redux-form';
 import {login} from '../actions/auth';
 import {required, nonEmpty} from '../validators';
 import Input from './input';
-import RegistrationForm from './register-form';
+
 
 export class LoginForm extends React.Component {
     onSubmit(values) {
@@ -47,7 +47,6 @@ export class LoginForm extends React.Component {
                     Log in
                 </button>
             </form>
-            <RegistrationForm/>
          </div>
         );
     }
