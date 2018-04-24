@@ -4,11 +4,39 @@ import MainPage from './components/main-page';
 import HomeLoginPage from './components/home-login-page';
 import {Route, withRouter} from 'react-router-dom';
 import {connect} from 'react-redux';
-
-
+import {refreshAuthToken} from './actions/auth';
 
 
 class App extends Component {
+
+  componentDidUpdate(prevProps) {
+    if (!prevProps.loggedIn && this.props.loggedIn) {
+        this.timedRefresh();
+    } else if (prevProps.loggedIn && !this.props.loggedIn) {
+        this.stopTimedRefresh();
+    }
+    }
+
+    componentWillUnmount() {
+        this.stopTimedRefresh();
+    }
+
+    timedRefresh() {
+        this.refreshInterval = setInterval(
+            () => this.props.dispatch(refreshAuthToken()),
+            60 * 60* 1000 // 1 hr
+        );
+    }
+
+    stopTimedRefresh() {
+        if (!this.refreshInterval) {
+            return;
+        }
+
+        clearInterval(this.refreshInterval);
+    }
+
+    
   render() {
     return(
       <div className="full-app">
@@ -19,6 +47,8 @@ class App extends Component {
   }
 }
 
+const mapStateToProps = state => ({
+  loggedIn: state.auth.currentUser !== null
+});
 
-
-export default withRouter(connect()(App));
+export default withRouter(connect(mapStateToProps)(App));
