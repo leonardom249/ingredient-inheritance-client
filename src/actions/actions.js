@@ -1,5 +1,6 @@
 import {API_BASE_URL} from '../config';
 import {SubmissionError} from 'redux-form';
+import {normalizeResponseErrors} from './normalize-errors';
 
 
 export const FETCH_RECIPE_REQUEST='FETCH_RECIPE_REQUEST'
@@ -50,3 +51,28 @@ export const fetchrecipes =()=>dispatch=>{
         })
     
 }
+
+
+export const createRecipe = (title, ingredients, recipe) => dispatch => {
+    
+    return (
+        fetch(`${API_BASE_URL}/api/recipes`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                title,
+                ingredients,
+                recipe
+            })
+        })
+            .then(res => normalizeResponseErrors(res))
+            .then(res => res.json())
+            .then((body) => console.log(body))
+            // .catch(err => {
+            //     dispatch(createRecipeError())
+            // })
+    );
+}
+            
