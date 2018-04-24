@@ -46,10 +46,11 @@ export const backToLogin = ()=>({
 
 
 const storeAuthInfo = (authToken, dispatch) => {
+    console.log('made it to storeAuthInfo');
     const decodedToken = jwtDecode(authToken);//returns object with a user object containing fullname and user name
     console.log(decodedToken.user);
     dispatch(setAuthToken(authToken));
-    dispatch(authSuccess(decodedToken.user));
+    dispatch(authSuccess(decodedToken.user.username));
     saveAuthToken(authToken);
 };
 
@@ -67,7 +68,9 @@ export const login = (username, password) => dispatch => {
             })
         })
             .then(res => normalizeResponseErrors(res))
-            .then(res => res.json())
+            .then(res => 
+                res.json()
+            )
             .then(({authToken}) => storeAuthInfo(authToken, dispatch))
             .catch(err => {
                 const {code} = err;

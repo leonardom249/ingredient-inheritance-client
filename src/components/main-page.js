@@ -1,10 +1,7 @@
 import React, { Component } from 'react';
-import RecipeList from './recipe-list';
-import AddRecipeForm from './form';
-import Header from './header';
-import Button from './button';
 import Instructions from './instructions';
 import {connect} from 'react-redux';
+import RecipePage from './recipe-page';
 
 
 
@@ -19,12 +16,9 @@ class MainPage extends Component {
         }
         else if (this.props.instructions === false){
         return(
-            <div className="App">
-            <Header/>
-            <Button/>
-            <AddRecipeForm />
-            <RecipeList />
-          </div>
+          <div className="App">
+          <RecipePage />
+        </div>
         );
       }
     }

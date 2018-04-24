@@ -6,7 +6,8 @@ import {connect} from 'react-redux';
 
 
 function HomeLoginPage (props) {
-    if(props.userLoggedIn !== null){
+    if(props.userLoggedIn !== null  ){
+      console.log(props.userLoggedIn);
         return <Redirect to='/mainpage'/>
     }
     
