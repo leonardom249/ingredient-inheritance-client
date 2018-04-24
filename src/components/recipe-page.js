@@ -1,6 +1,5 @@
 import React from 'react';
-import {Link, Redirect} from 'react-router-dom';
-import RegistrationForm from './register-form';
+import {Redirect} from 'react-router-dom';
 import Header from './header';
 import Button from './button';
 import LogoutButton from './logout-button';
@@ -11,8 +10,7 @@ import {connect} from 'react-redux';
 
 
 function RecipePage (props) {
-    if(props.userLoggedIn === null || props.userLoggedIn === undefined){
-        console.log('null');
+    if(!props.userLoggedIn){
         return <Redirect to='/'/>
     }
     

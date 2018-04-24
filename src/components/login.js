@@ -1,5 +1,5 @@
 import React from 'react';
-import {Field, reduxForm, focus} from 'redux-form';
+import {Field, reduxForm} from 'redux-form';
 import {login} from '../actions/auth';
 import {required, nonEmpty} from '../validators';
 import Input from './input';
@@ -53,5 +53,5 @@ export class LoginForm extends React.Component {
 }
 
 export default reduxForm({
-    form: 'login',
+    form: 'login'
 })(LoginForm);

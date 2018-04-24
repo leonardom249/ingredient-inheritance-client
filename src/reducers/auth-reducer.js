@@ -1,3 +1,6 @@
+import {loadAuthToken, clearAuthToken} from '../local-storage';
+import jwtDecode from 'jwt-decode';
+
 import {
     SET_AUTH_TOKEN,
     CLEAR_AUTH,
@@ -8,9 +11,17 @@ import {
     // BACK_TO_LOGIN
 } from '../actions/auth';
 
+
+let authToken = loadAuthToken();
+let currentUser;
+if(authToken){
+    const decodedToken = jwtDecode(authToken);
+    currentUser = decodedToken.user.username;
+}
+
 const initialState = {
-    authToken: null, 
-    currentUser: null,
+    authToken, 
+    currentUser,
     loading: false,
     error: null,
     // dialogAlert: false,
@@ -18,12 +29,12 @@ const initialState = {
 };
 
 export default (state = initialState, action) => {
-    console.log(action.type);
     if (action.type === SET_AUTH_TOKEN) {
         return Object.assign({}, state, {
             authToken: action.authToken
         });
     } else if (action.type === CLEAR_AUTH) {
+        clearAuthToken();
         return Object.assign({}, state, {
             authToken: null,
             currentUser: null

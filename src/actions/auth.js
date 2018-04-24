@@ -46,11 +46,11 @@ export const backToLogin = ()=>({
 
 
 const storeAuthInfo = (authToken, dispatch) => {
-    console.log('made it to storeAuthInfo');
     const decodedToken = jwtDecode(authToken);//returns object with a user object containing fullname and user name
     console.log(decodedToken.user);
     dispatch(setAuthToken(authToken));
     dispatch(authSuccess(decodedToken.user.username));
+    //To Do: combine setAuthToken action and authSuccess action
     saveAuthToken(authToken);
 };
 
@@ -103,6 +103,5 @@ export const refreshAuthToken = () => (dispatch, getState) => {
         .catch(err => {
             dispatch(authError(err));
             dispatch(clearAuth());
-            clearAuthToken(authToken);
         });
 };

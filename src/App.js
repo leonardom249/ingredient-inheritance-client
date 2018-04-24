@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import LoginForm from './components/login';
 import MainPage from './components/main-page';
 import HomeLoginPage from './components/home-login-page';
 import {Route, withRouter} from 'react-router-dom';
@@ -24,7 +23,7 @@ class App extends Component {
     timedRefresh() {
         this.refreshInterval = setInterval(
             () => this.props.dispatch(refreshAuthToken()),
-            60 * 60* 1000 // 1 hr
+            59 * 60* 1000 // 59 min
         );
     }
 
@@ -32,11 +31,10 @@ class App extends Component {
         if (!this.refreshInterval) {
             return;
         }
-
         clearInterval(this.refreshInterval);
     }
 
-    
+
   render() {
     return(
       <div className="full-app">
