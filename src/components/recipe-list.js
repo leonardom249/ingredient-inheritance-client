@@ -27,7 +27,7 @@ class recipeList extends React.Component{
 }
 
 const mapStateToProps = (state) =>({
-    recipes: state.auth.recipes
+    recipes: state.recipe.recipes
 })
 
 export default connect(mapStateToProps)(recipeList);

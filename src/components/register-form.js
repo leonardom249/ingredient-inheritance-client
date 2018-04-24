@@ -1,5 +1,5 @@
 import React from 'react';
-import {required, nonEmpty, matches, length, isTrimmed} from '../validators';
+import {required, nonEmpty, matches, length, trimmed} from '../validators';
 
 import {Field, reduxForm, focus} from 'redux-form';
 import {login} from '../actions/auth';
@@ -12,11 +12,11 @@ const matchesPassword = matches('password');
 
 export class RegistrationForm extends React.Component {
     onSubmit(values) {
-        const {username, password, firstName, lastName} = values;
-        const user = {username, password, firstName, lastName};
+        const {username, password, fullName} = values;
+        const user = {username, password, fullName};
         return this.props
             .dispatch(registerUser(user))
-            .then(() => this.props.dispatch(login(username, password)));
+            // .then(() => this.props.dispatch(login(username, password)));
     }
 
     render() {
@@ -33,14 +33,14 @@ export class RegistrationForm extends React.Component {
                     component={Input}
                     type="text"
                     name="username"
-                    validate={[required, nonEmpty, isTrimmed]}
+                    validate={[required, nonEmpty, trimmed]}
                 />
                 <label htmlFor="password">Password</label>
                 <Field
                     component={Input}
                     type="password"
                     name="password"
-                    validate={[required, passwordLength, isTrimmed]}
+                    validate={[required, passwordLength, trimmed]}
                 />
                 <label htmlFor="passwordConfirm">Confirm password</label>
                 <Field
@@ -51,7 +51,8 @@ export class RegistrationForm extends React.Component {
                 />
                 <button
                     type="submit"
-                    disabled={this.props.pristine || this.props.submitting}>
+                    // disabled={this.props.pristine || this.props.submitting}
+                >
                     Register
                 </button>
             </form>

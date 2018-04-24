@@ -14,29 +14,29 @@ import {connect} from 'react-redux';
 
 class App extends Component {
   render() {
-      if(this.props.instructions === true){
-        return ( 
-          <div className='instructions'>
-            <Instructions/>
-          </div>
-        )
-      }
-      else if (this.props.instructions === false){
-      return(
-          <div className="App">
-          <Header/>
-          <Button/>
-          <AddRecipeForm />
-          <RecipeList />
-        </div>
-      );
-    }
-    // return(<div><LoginForm/></div>)
+    //   if(this.props.instructions === true){
+    //     return ( 
+    //       <div className='instructions'>
+    //         <Instructions/>
+    //       </div>
+    //     )
+    //   }
+    //   else if (this.props.instructions === false){
+    //   return(
+    //       <div className="App">
+    //       <Header/>
+    //       <Button/>
+    //       <AddRecipeForm />
+    //       <RecipeList />
+    //     </div>
+    //   );
+    // }
+    return(<div><LoginForm/></div>)
   }
 }
 
 const mapStateToProps = (state) =>({
-  instructions: state.auth.instructions
+  instructions: state.recipe.instructions
 })
 
 export default connect(mapStateToProps)(App)
