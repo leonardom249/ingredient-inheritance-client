@@ -99,7 +99,7 @@ export const createRecipe = (title, ingredients, recipe) => dispatch => {
     );
 }
 
-export function updateRecipePost(id, title, ingredients, recipe) {
+export const updateRecipePost=(id, title, ingredients, recipe)=> dispatch=> {
     const data={
         _id: id,
         title,
@@ -115,6 +115,7 @@ export function updateRecipePost(id, title, ingredients, recipe) {
     })
         .then(res => normalizeResponseErrors(res))
         .then(res => res.json())
+        .then(recipes=> dispatch(fetchrecipes()))
         .then((body) => console.log(body)).catch(err => console.error(err));
     }
             
