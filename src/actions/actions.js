@@ -92,6 +92,7 @@ export const createRecipe = (title, ingredients, recipe) => dispatch => {
         })
             .then(res => normalizeResponseErrors(res))
             .then(res => res.json())
+            .then(res=> dispatch(addrecipe(res)))
             .then((body) => console.log(body))
             // .catch(err => {
             //     dispatch(createRecipeError())

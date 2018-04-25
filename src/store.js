@@ -10,6 +10,7 @@ const store = createStore( combineReducers({
     form: formReducer,
     recipe: recipeReducer,
     auth: authReducer
-}), applyMiddleware(thunk));
+}), window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
+ applyMiddleware(thunk));
 
 export default store;
