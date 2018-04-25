@@ -98,4 +98,23 @@ export const createRecipe = (title, ingredients, recipe) => dispatch => {
             // })
     );
 }
+
+export function updateRecipePost(id, title, ingredients, recipe) {
+    const data={
+        _id: id,
+        title,
+        ingredients,
+        recipe
+    }
+    return fetch(`${API_BASE_URL}/api/recipes/${id}`, {
+        method: 'PUT',
+        body: JSON.stringify(data),
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    })
+        .then(res => normalizeResponseErrors(res))
+        .then(res => res.json())
+        .then((body) => console.log(body)).catch(err => console.error(err));
+    }
             
