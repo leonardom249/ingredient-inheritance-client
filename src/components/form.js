@@ -1,10 +1,10 @@
 import React from 'react';
 import {Field, reduxForm, reset} from 'redux-form';
-import { addrecipe, createRecipe, updateRecipePost, createNewRecipe } from '../actions/actions';
+import {createRecipe, updateRecipePost } from '../actions/actions';
 import {required, nonEmpty} from '../validators';
-import { connect } from 'react-redux'
-
-
+import { connect } from 'react-redux';
+import Input from './input';
+import TextArea from './textarea-input';
 
 
 export class AddrecipeForm extends React.Component{ 
@@ -27,35 +27,37 @@ export class AddrecipeForm extends React.Component{
                     this.onSubmit(values)
             )}
             >
-            <label htmlFor="add title">Title:</label>
+            <label>Title:
                 <Field 
-                    component="input"
+                    component={Input}
                     type="text"
                     name="title"
                     placeholder="Uncle Bob's Chili"
                     validate={[required, nonEmpty]}
                 />
+            </label>
             <br/>
-            <label htmlFor="add ingredients">Ingredients:</label>
+            <label>Ingredients:
                 <Field 
-                    component="textarea"
+                    component={TextArea}
                     type="text"
                     name="ingredients"
                     placeholder="Ex: 6 cans crushed tomatoes..."
                     validate={[required, nonEmpty]}
 
                 />
+            </label>
             <br/>
-            <label htmlFor="add recipe">Recipe:</label>
+            <label>Recipe:
                 <Field 
-                    component="textarea"
+                    component={TextArea}
                     type="text"
                     name="recipe"
                     placeholder="Ex: Step 1. Crush garlic"
                     validate={[required, nonEmpty]}
 
                 />
-
+            </label>
 
                 <br/>
                 <button type="submit">Save</button>

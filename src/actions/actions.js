@@ -1,6 +1,7 @@
 import {API_BASE_URL} from '../config';
 import {normalizeResponseErrors} from './normalize-errors';
 
+import {reset} from 'redux-form';
 
 export const FETCH_RECIPE_REQUEST='FETCH_RECIPE_REQUEST'
 export const fetchrecipeRequest=()=>({
@@ -94,9 +95,9 @@ export const createRecipe = (title, ingredients, recipe) => dispatch => {
             .then(res => res.json())
             .then(res=> dispatch(addrecipe(res)))
             .then((body) => console.log(body))
-            // .catch(err => {
-            //     dispatch(createRecipeError())
-            // })
+            .catch(err => {
+                console.error(err)
+            })
     );
 }
 
@@ -117,6 +118,8 @@ export const updateRecipePost=(id, title, ingredients, recipe)=> dispatch=> {
         .then(res => normalizeResponseErrors(res))
         .then(res => res.json())
         .then(recipes=> dispatch(fetchrecipes()))
-        .then((body) => console.log(body)).catch(err => console.error(err));
+        // .then(()=> dispatch(reset('recipe')))
+        .then((body) => console.log(body))
+        .catch(err => console.error(err));
     }
             

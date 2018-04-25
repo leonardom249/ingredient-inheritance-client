@@ -1,9 +1,9 @@
 import React from 'react';
 
-export default class Input extends React.Component {
+export default class TextArea extends React.Component {
     componentDidUpdate(prevProps) {
         if (!prevProps.meta.active && this.props.meta.active) {
-            this.input.focus();
+            this.textarea.focus();
         }
     }
 
@@ -21,15 +21,16 @@ export default class Input extends React.Component {
         }
 
         return (
-            <div className="form-input">
+            <div className="form-textarea">
+                
                     {error}
                     {warning}
-                
-                <input
+            
+                <textarea
                     {...this.props.input}
                     type={this.props.type}
                     placeholder={this.props.placeholder}
-                    ref={input => (this.input = input)}
+                    ref={textarea => (this.textarea = textarea)}
                 />
             </div>
         );
