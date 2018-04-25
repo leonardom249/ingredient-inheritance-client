@@ -64,30 +64,16 @@ export default (state=initialState, action) =>{
     })
   }
   else if(action.type === SET_INITIAL_VALUES){
-    let initTitle;
-    let initIngredients;
-    let initRecipe;
-    let initId;
+  
 
-    state.recipes.map(obj=>{
-        if(obj._id===action.id && obj.title===action.title){
-          initTitle=obj.title;
-          initIngredients=obj.ingredients;
-          initRecipe=obj.recipe;
-          initId=obj._id;
-        }
-        else{
-          return state
-        }
-      }
-    )
-    // Mentor notes: is there a better way to do this^^ keep getting expected to return a value at end of arrow function.
+    const matchedRecipe= state.recipes.find(obj=> obj._id===action.id)
+           
     return Object.assign({}, state, {
       initialValues:{
-        _id: initId,
-        title: initTitle,
-        ingredients: initIngredients,
-        recipe: initRecipe
+        _id: matchedRecipe._id,
+        title: matchedRecipe.title,
+        ingredients: matchedRecipe.ingredients,
+        recipe: matchedRecipe.recipe
       }
     })
   }
