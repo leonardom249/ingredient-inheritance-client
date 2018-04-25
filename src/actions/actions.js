@@ -36,11 +36,10 @@ export const toggleInstructionsOff=()=>({
 })
 
 export const SHOW_FULL_RECIPE='SHOW_FULL_RECIPE'
-export const showFullRecipe=(title, ingredients, recipe)=>({
+export const showFullRecipe=(id, title)=>({
     type:SHOW_FULL_RECIPE,
-    title,
-    ingredients,
-    recipe
+    id,
+    title
 })
 
 export const UPDATE_FULL_RECIPE='UPDATE_FULL_RECIPE'

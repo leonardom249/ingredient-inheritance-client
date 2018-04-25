@@ -3,7 +3,8 @@ import {FETCH_RECIPE_SUCCESS,
    FETCH_RECIPE_ERROR, 
    ADD_RECIPE, 
    TOGGLE_INSTRUCTIONS_ON,
-   TOGGLE_INSTRUCTIONS_OFF
+   TOGGLE_INSTRUCTIONS_OFF,
+   SHOW_FULL_RECIPE
   } from '../actions/actions';
 
 
@@ -13,9 +14,10 @@ const initialState={
   loading: false,
   error: null,
   initialValues: {
-    title: null,
-    ingredients: null,
-    recipe: null
+    _id:'',
+    title: '',
+    ingredients: '',
+    recipe: ''
   }
 };
 
@@ -57,6 +59,34 @@ export default (state=initialState, action) =>{
       error: null,
       loading: false,
       instructions: false
+    })
+  }
+  else if(action.type === SHOW_FULL_RECIPE){
+    let initTitle;
+    let initIngredients;
+    let initRecipe;
+    let initId;
+
+    state.recipes.map(obj=>{
+        if(obj._id===action.id && obj.title===action.title){
+          initTitle=obj.title;
+          initIngredients=obj.ingredients;
+          initRecipe=obj.recipe;
+          initId=obj._id;
+        }
+        else{
+          return state
+        }
+      }
+    )
+    // Mentor notes: is there a better way to do this^^ keep getting expected to return a value at end of arrow function.
+    return Object.assign({}, state, {
+      initialValues:{
+        _id: initId,
+        title: initTitle,
+        ingredients: initIngredients,
+        recipe: initRecipe
+      }
     })
   }
     return state;
