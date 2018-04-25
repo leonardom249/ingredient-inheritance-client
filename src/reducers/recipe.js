@@ -15,8 +15,8 @@ const initialState={
   error: null,
   initialValues: {
     _id:'',
-    title: 'hi',
-    ingredients: 'purple',
+    title: '',
+    ingredients: '',
     recipe: ''
   }
 };
