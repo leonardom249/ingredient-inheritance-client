@@ -1,5 +1,5 @@
 import React from 'react';
-import {Field, reduxForm} from 'redux-form';
+import {Field, reduxForm, reset} from 'redux-form';
 import { addrecipe, createRecipe, updateRecipePost, createNewRecipe } from '../actions/actions';
 import {required, nonEmpty} from '../validators';
 import { connect } from 'react-redux'
@@ -19,6 +19,7 @@ export class AddrecipeForm extends React.Component{
 
             //API call=createRecipe
     }
+    this.props.dispatch(reset('recipe'))
 
     }
     
