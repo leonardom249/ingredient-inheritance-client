@@ -15,12 +15,9 @@ export class AddrecipeForm extends React.Component{
         
         else if(this.props.initialValues._id===''){
             this.props.dispatch(createRecipe(value.title, value.ingredients, value.recipe));
-            this.props.dispatch(createNewRecipe());
-
-            //API call=createRecipe
-    }
-    this.props.dispatch(reset('recipe'))
-
+        }
+        
+        this.props.dispatch(reset('recipe'))
     }
     
     render(){
