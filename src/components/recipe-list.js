@@ -12,10 +12,11 @@ class recipeList extends React.Component{
 
         const recipeList = this.props.recipes.map((recipe, index)=>{
             return(
-                <li key={index}> 
+                <li key={recipe._id}> 
                    <a 
-                   href='#'
-                   onClick={()=>{
+                   href={`#${recipe._id}`}
+                   onClick={(e)=>{
+                    e.preventDefault();
                     this.props.dispatch(setInitialValues(recipe._id, recipe.title));
                     console.log(this.props.initialValues)
                     }}
