@@ -5,7 +5,8 @@ import {FETCH_RECIPE_SUCCESS,
    TOGGLE_INSTRUCTIONS_ON,
    TOGGLE_INSTRUCTIONS_OFF,
    SET_INITIAL_VALUES,
-   CREATE_NEW_RECIPE
+   CREATE_NEW_RECIPE,
+   UPDATE_FULL_RECIPE
   } from '../actions/actions';
 
 
@@ -98,6 +99,25 @@ export default (state=initialState, action) =>{
       ingredients: '',
       recipe: ''
      }
+    })
+  }else if(action.type === UPDATE_FULL_RECIPE){
+    let updatedRecipe={};
+
+    state.recipes.map(obj=>{
+      if(obj._id===action.id){
+        updatedRecipe={
+          _id: obj._id,
+          title: action.title,
+          ingredients: action.ingredients,
+          recipe: action.recipe
+        }
+      }
+    })
+
+    const filteredRecipes = state.recipes.filter(obj=>obj._id !== action.id)
+
+    return Object.assign({}, state, {
+    recipes:[...filteredRecipes, updatedRecipe]
     })
   }
     return state;
