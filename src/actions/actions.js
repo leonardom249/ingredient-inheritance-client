@@ -53,6 +53,11 @@ export const updateFullRecipe=(title, ingredients, recipe)=>({
 const LOAD='LOAD'
 export const load = data => ({ type: LOAD, data })
 
+export const CREATE_NEW_RECIPE='CREATE_NEW_RECIPE'
+export const createNewRecipe=()=>({
+    type:CREATE_NEW_RECIPE
+})
+
 
 export const fetchrecipes =()=>dispatch=>{
     dispatch(fetchrecipeRequest());

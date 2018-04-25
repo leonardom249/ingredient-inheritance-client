@@ -5,6 +5,8 @@ import Button from './button';
 import LogoutButton from './logout-button';
 import AddRecipeForm from './form';
 import RecipeList from './recipe-list';
+import CreateButton from './create-button';
+
 
 import {connect} from 'react-redux';
 
@@ -19,6 +21,7 @@ function RecipePage (props) {
             <Header/>
             <Button/>
             <LogoutButton/>
+            <CreateButton />
             <AddRecipeForm />
             <RecipeList />
       </div>

@@ -4,7 +4,8 @@ import {FETCH_RECIPE_SUCCESS,
    ADD_RECIPE, 
    TOGGLE_INSTRUCTIONS_ON,
    TOGGLE_INSTRUCTIONS_OFF,
-   SET_INITIAL_VALUES
+   SET_INITIAL_VALUES,
+   CREATE_NEW_RECIPE
   } from '../actions/actions';
 
 
@@ -87,6 +88,16 @@ export default (state=initialState, action) =>{
         ingredients: initIngredients,
         recipe: initRecipe
       }
+    })
+  }
+  else if(action.type === CREATE_NEW_RECIPE){
+    return Object.assign({}, state, {
+     initialValues:{
+      _id:'',
+      title: '',
+      ingredients: '',
+      recipe: ''
+     }
     })
   }
     return state;
