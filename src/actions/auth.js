@@ -3,7 +3,7 @@ import {SubmissionError} from 'redux-form';
 
 import {API_BASE_URL} from '../config';
 import {normalizeResponseErrors} from './normalize-errors';
-import {saveAuthToken, clearAuthToken} from '../local-storage';
+import {saveAuthToken} from '../local-storage';
 
 export const SET_AUTH_TOKEN = 'SET_AUTH_TOKEN';
 export const setAuthToken = authToken => ({
@@ -22,9 +22,10 @@ export const authRequest = () => ({
 });
 
 export const AUTH_SUCCESS = 'AUTH_SUCCESS';
-export const authSuccess = currentUser => ({
+export const authSuccess = (currentUser, userId) => ({
     type: AUTH_SUCCESS,
-    currentUser
+    currentUser,
+    userId
 });
 
 export const AUTH_ERROR = 'AUTH_ERROR';
@@ -49,8 +50,7 @@ const storeAuthInfo = (authToken, dispatch) => {
     const decodedToken = jwtDecode(authToken);//returns object with a user object containing fullname and user name
     console.log(decodedToken.user);
     dispatch(setAuthToken(authToken));
-    dispatch(authSuccess(decodedToken.user.username));
-    //To Do: combine setAuthToken action and authSuccess action
+    dispatch(authSuccess(decodedToken.user.username, decodedToken.user.userId));
     saveAuthToken(authToken);
 };
 

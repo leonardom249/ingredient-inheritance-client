@@ -35,6 +35,22 @@ export const toggleInstructionsOff=()=>({
     type:TOGGLE_INSTRUCTIONS_OFF,
 })
 
+export const SHOW_FULL_RECIPE='SHOW_FULL_RECIPE'
+export const showFullRecipe=(title, ingredients, recipe)=>({
+    type:SHOW_FULL_RECIPE,
+    title,
+    ingredients,
+    recipe
+})
+
+export const UPDATE_FULL_RECIPE='UPDATE_FULL_RECIPE'
+export const updateFullRecipe=(title, ingredients, recipe)=>({
+    type:UPDATE_FULL_RECIPE,
+    title,
+    ingredients,
+    recipe
+})
+
 
 export const fetchrecipes =()=>dispatch=>{
     dispatch(fetchrecipeRequest());

@@ -11,7 +11,12 @@ const initialState={
   recipes:[],
   instructions: false,
   loading: false,
-  error: null
+  error: null,
+  initialValues: {
+    title: null,
+    ingredients: null,
+    recipe: null
+  }
 };
 
 export default (state=initialState, action) =>{

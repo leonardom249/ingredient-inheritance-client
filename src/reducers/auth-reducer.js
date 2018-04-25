@@ -25,7 +25,8 @@ const initialState = {
     loading: false,
     error: null,
     // dialogAlert: false,
-    time: 5000
+    time: 5000,
+    userId: null
 };
 
 export default (state = initialState, action) => {
@@ -45,10 +46,11 @@ export default (state = initialState, action) => {
             error: null
         });
     } else if (action.type === AUTH_SUCCESS) {
-        console.log(action.currentUser);
+        console.log(action.currentUser, action.userId);
         return Object.assign({}, state, {
             loading: false,
-            currentUser: action.currentUser
+            currentUser: action.currentUser,
+            userId: action.userId
         });
     } else if (action.type === AUTH_ERROR) {
         return Object.assign({}, state, {
