@@ -10,8 +10,8 @@ import { connect } from 'react-redux'
 export class AddrecipeForm extends React.Component{ 
    onSubmit(value) {
        if(this.props.initialValues._id !== ''){
-           this.props.dispatch(updateFullRecipe(this.props.initialValues._id, value.title, value.ingredients, value.recipe));
-        //    this.props.dispatch(updateRecipePost(this.props.initialValues._id, value.title, value.ingredients, value.recipe));
+        //    this.props.dispatch(updateFullRecipe(this.props.initialValues._id, value.title, value.ingredients, value.recipe));
+           this.props.dispatch(updateRecipePost(this.props.initialValues._id, value.title, value.ingredients, value.recipe));
         }
         
         else if(this.props.initialValues._id===''){
