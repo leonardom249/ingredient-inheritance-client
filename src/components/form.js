@@ -1,6 +1,6 @@
 import React from 'react';
 import {Field, reduxForm} from 'redux-form';
-import { addrecipe, createRecipe, updateFullRecipe, updateRecipePost } from '../actions/actions';
+import { addrecipe, createRecipe, updateRecipePost } from '../actions/actions';
 import {required, nonEmpty} from '../validators';
 import { connect } from 'react-redux'
 
@@ -10,7 +10,6 @@ import { connect } from 'react-redux'
 export class AddrecipeForm extends React.Component{ 
    onSubmit(value) {
        if(this.props.initialValues._id !== ''){
-        //    this.props.dispatch(updateFullRecipe(this.props.initialValues._id, value.title, value.ingredients, value.recipe));
            this.props.dispatch(updateRecipePost(this.props.initialValues._id, value.title, value.ingredients, value.recipe));
         }
         

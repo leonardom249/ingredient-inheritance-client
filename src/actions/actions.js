@@ -42,14 +42,14 @@ export const setInitialValues=(id, title)=>({
     title
 })
 
-export const UPDATE_FULL_RECIPE='UPDATE_FULL_RECIPE'
-export const updateFullRecipe=(id, title, ingredients, recipe)=>({
-    type:UPDATE_FULL_RECIPE,
-    id,
-    title,
-    ingredients,
-    recipe
-})
+// export const UPDATE_FULL_RECIPE='UPDATE_FULL_RECIPE'
+// export const updateFullRecipe=(id, title, ingredients, recipe)=>({
+//     type:UPDATE_FULL_RECIPE,
+//     id,
+//     title,
+//     ingredients,
+//     recipe
+// })
 
 const LOAD='LOAD'
 export const load = data => ({ type: LOAD, data })
