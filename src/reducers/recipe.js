@@ -4,7 +4,7 @@ import {FETCH_RECIPE_SUCCESS,
    ADD_RECIPE, 
    TOGGLE_INSTRUCTIONS_ON,
    TOGGLE_INSTRUCTIONS_OFF,
-   SHOW_FULL_RECIPE
+   SET_INITIAL_VALUES
   } from '../actions/actions';
 
 
@@ -15,8 +15,8 @@ const initialState={
   error: null,
   initialValues: {
     _id:'',
-    title: '',
-    ingredients: '',
+    title: 'hi',
+    ingredients: 'purple',
     recipe: ''
   }
 };
@@ -61,7 +61,7 @@ export default (state=initialState, action) =>{
       instructions: false
     })
   }
-  else if(action.type === SHOW_FULL_RECIPE){
+  else if(action.type === SET_INITIAL_VALUES){
     let initTitle;
     let initIngredients;
     let initRecipe;

@@ -35,9 +35,9 @@ export const toggleInstructionsOff=()=>({
     type:TOGGLE_INSTRUCTIONS_OFF,
 })
 
-export const SHOW_FULL_RECIPE='SHOW_FULL_RECIPE'
-export const showFullRecipe=(id, title)=>({
-    type:SHOW_FULL_RECIPE,
+export const SET_INITIAL_VALUES='SET_INITIAL_VALUES'
+export const setInitialValues=(id, title)=>({
+    type:SET_INITIAL_VALUES,
     id,
     title
 })
@@ -49,6 +49,9 @@ export const updateFullRecipe=(title, ingredients, recipe)=>({
     ingredients,
     recipe
 })
+
+const LOAD='LOAD'
+export const load = data => ({ type: LOAD, data })
 
 
 export const fetchrecipes =()=>dispatch=>{

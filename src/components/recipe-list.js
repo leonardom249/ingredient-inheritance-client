@@ -1,6 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import { fetchrecipes, showFullRecipe } from '../actions/actions';
+import { fetchrecipes, setInitialValues } from '../actions/actions';
 
 class recipeList extends React.Component{ 
     componentDidMount(){
@@ -16,9 +16,9 @@ class recipeList extends React.Component{
                    <a 
                    href='#'
                    onClick={()=>{
-                    console.log('recipe-list', recipe._id, recipe.title);
-                    this.props.dispatch(showFullRecipe(recipe._id, recipe.title));
-                   }}
+                    this.props.dispatch(setInitialValues(recipe._id, recipe.title));
+                    console.log(this.props.initialValues)
+                    }}
                    >
                      {recipe.title}
                     </a> 
