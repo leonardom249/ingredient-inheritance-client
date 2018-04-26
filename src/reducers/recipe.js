@@ -6,6 +6,8 @@ import {FETCH_RECIPE_SUCCESS,
    TOGGLE_INSTRUCTIONS_OFF,
    SET_INITIAL_VALUES,
    CREATE_NEW_RECIPE,
+   SWITCH_TO_REGISTER,
+   SWITCH_TO_LOGIN,
   //  UPDATE_FULL_RECIPE
   } from '../actions/actions';
 
@@ -13,6 +15,7 @@ import {FETCH_RECIPE_SUCCESS,
 const initialState={
   recipes:[],
   instructions: false,
+  register: false,
   loading: false,
   error: null,
   initialValues: {
@@ -61,6 +64,16 @@ export default (state=initialState, action) =>{
       error: null,
       loading: false,
       instructions: false
+    })
+  }
+  else if(action.type === SWITCH_TO_REGISTER){
+    return Object.assign({}, state, {
+      register: true
+    })
+  }
+  else if(action.type === SWITCH_TO_LOGIN){
+    return Object.assign({}, state, {
+      register: false
     })
   }
   else if(action.type === SET_INITIAL_VALUES){

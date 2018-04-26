@@ -42,6 +42,16 @@ export const setInitialValues=(id, title)=>({
     title
 })
 
+export const SWITCH_TO_REGISTER='SWITCH_TO_REGISTER'
+export const switchToRegister=()=>({
+    type:SWITCH_TO_REGISTER
+})
+
+export const SWITCH_TO_LOGIN='SWITCH_TO_LOGIN'
+export const swithcToLogin=()=>({
+    type:SWITCH_TO_LOGIN,
+})
+
 // export const UPDATE_FULL_RECIPE='UPDATE_FULL_RECIPE'
 // export const updateFullRecipe=(id, title, ingredients, recipe)=>({
 //     type:UPDATE_FULL_RECIPE,
