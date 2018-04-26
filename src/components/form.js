@@ -27,33 +27,38 @@ export class AddrecipeForm extends React.Component{
                     this.onSubmit(values)
             )}
             >
-            <label>Title:
+            <label><strong>Title:</strong>
                 <Field 
                     component={Input}
                     type="text"
                     name="title"
-                    placeholder="Uncle Bob's Chili"
+                    size="48"
+                    placeholder="Ex: Uncle Bob's Chili..."
                     validate={[required, nonEmpty]}
                 />
             </label>
             <br/>
-            <label>Ingredients:
+            <label><strong>Ingredients:</strong>
                 <Field 
                     component={TextArea}
                     type="text"
                     name="ingredients"
                     placeholder="Ex: 6 cans crushed tomatoes..."
+                    rows="10" 
+                    cols="50"
                     validate={[required, nonEmpty]}
 
                 />
             </label>
             <br/>
-            <label>Recipe:
+            <label><strong>Recipe:</strong>
                 <Field 
                     component={TextArea}
                     type="text"
                     name="recipe"
                     placeholder="Ex: Step 1. Crush garlic"
+                    rows="20" 
+                    cols="50"
                     validate={[required, nonEmpty]}
 
                 />
