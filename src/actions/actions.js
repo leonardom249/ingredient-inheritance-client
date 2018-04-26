@@ -76,13 +76,16 @@ export const fetchrecipes =()=>dispatch=>{
 }
 
 
-export const createRecipe = (title, ingredients, recipe) => dispatch => {
-    
+export const createRecipe = (title, ingredients, recipe) => (dispatch, getState) => {
+    const authToken = getState().auth.authToken;
+
+
     return (
         fetch(`${API_BASE_URL}/api/recipes`, {
             method: 'POST',
             headers: {
-                'Content-Type': 'application/json'
+                'Content-Type': 'application/json',
+                Authorization: `Bearer ${authToken}`
             },
             body: JSON.stringify({
                 title,
