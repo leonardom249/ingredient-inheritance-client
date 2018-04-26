@@ -48,7 +48,7 @@ export const switchToRegister=()=>({
 })
 
 export const SWITCH_TO_LOGIN='SWITCH_TO_LOGIN'
-export const swithcToLogin=()=>({
+export const switchToLogin=()=>({
     type:SWITCH_TO_LOGIN,
 })
 
