@@ -69,6 +69,7 @@ export const createNewRecipe=()=>({
     type:CREATE_NEW_RECIPE
 })
 
+//Everything below this uses fetch for CRUD operations/communicating with the server
 
 export const fetchrecipes =()=>(dispatch, getState)=>{
     dispatch(fetchrecipeRequest());
@@ -140,5 +141,20 @@ export const updateRecipePost=(id, title, ingredients, recipe)=> (dispatch, getS
         .then(recipes=> dispatch(fetchrecipes()))
         // .then((body) => console.log(body))
         .catch(err => console.error(err));
-    }
-            
+}
+
+export const deleteRecipe =(id)=>(dispatch, getState)=>{
+    const authToken = getState().auth.authToken;
+    fetch(`${API_BASE_URL}/api/recipes/${id}`, {
+        method: 'DELETE',
+        headers: {
+            Authorization: `Bearer ${authToken}`
+        }
+    })
+        .then(recipes=> dispatch(fetchrecipes()))
+        .catch(err=> {
+            console.log(err);
+        })
+    
+}
+
