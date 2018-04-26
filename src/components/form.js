@@ -8,6 +8,11 @@ import TextArea from './textarea-input';
 
 
 export class AddrecipeForm extends React.Component{ 
+    componentDidMount(){
+        console.log('did mount running');
+        this.props.dispatch(createNewRecipe());
+    }
+    
    onSubmit(value) {
        if(this.props.initialValues._id !== ''){
            this.props.dispatch(updateRecipePost(this.props.initialValues._id, value.title, value.ingredients, value.recipe));
@@ -21,6 +26,7 @@ export class AddrecipeForm extends React.Component{
     }
     
     render(){
+        console.log(this.props)
         return(
             <form
                 onSubmit={this.props.handleSubmit(values =>

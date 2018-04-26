@@ -17,12 +17,16 @@ function RecipePage (props) {
     }
     
     return(
-      <div>
+      <div className="recipe-page">
             <Header/>
+        <nav>
             <Button/>
             <LogoutButton/>
             <CreateButton />
+        </nav>
+        <div className="recipe-form">
             <AddRecipeForm />
+        </div>
             <RecipeList />
       </div>
     )

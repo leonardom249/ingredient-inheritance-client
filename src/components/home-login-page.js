@@ -3,6 +3,7 @@ import {Redirect} from 'react-router-dom';
 import RegistrationForm from './register-form';
 import LoginForm from './login';
 import LoginButton from './login-button';
+import Header from './header';
 import RegisterButton from './register-button';
 import {connect} from 'react-redux';
 
@@ -14,6 +15,7 @@ function HomeLoginPage (props) {
     if(props.register===false){ 
       return(
             <div>
+              <Header />
               <LoginForm/>
               <RegisterButton />
             </div>
@@ -21,8 +23,9 @@ function HomeLoginPage (props) {
     if(props.register===true){ 
       return(
             <div>
+              <Header />
               <RegistrationForm/>
-              <LoginButton />
+               <LoginButton /> 
             </div>
           )}
 }
