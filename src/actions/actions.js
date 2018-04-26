@@ -60,10 +60,14 @@ export const createNewRecipe=()=>({
 })
 
 
-export const fetchrecipes =()=>dispatch=>{
+export const fetchrecipes =()=>(dispatch, getState)=>{
     dispatch(fetchrecipeRequest());
-    
-        fetch(`${API_BASE_URL}/api/recipes`)
+    const authToken = getState().auth.authToken;
+    fetch(`${API_BASE_URL}/api/recipes`, {
+        headers: {
+            Authorization: `Bearer ${authToken}`
+        }
+    })
         .then(res => 
             res.json()
         )
@@ -103,24 +107,28 @@ export const createRecipe = (title, ingredients, recipe) => (dispatch, getState)
     );
 }
 
-export const updateRecipePost=(id, title, ingredients, recipe)=> dispatch=> {
+export const updateRecipePost=(id, title, ingredients, recipe)=> (dispatch, getState)=> {
     const data={
         _id: id,
         title,
         ingredients,
         recipe
     }
+    const authToken = getState().auth.authToken;
+    
     return fetch(`${API_BASE_URL}/api/recipes/${id}`, {
         method: 'PUT',
         body: JSON.stringify(data),
         headers: {
-            'Content-Type': 'application/json'
+            'Content-Type': 'application/json',
+            Authorization: `Bearer ${authToken}`
+            
         }
     })
         .then(res => normalizeResponseErrors(res))
         .then(res => res.json())
         .then(recipes=> dispatch(fetchrecipes()))
-        .then((body) => console.log(body))
+        // .then((body) => console.log(body))
         .catch(err => console.error(err));
     }
             
