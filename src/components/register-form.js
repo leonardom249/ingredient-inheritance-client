@@ -49,7 +49,10 @@ export class RegistrationForm extends React.Component {
                     name="passwordConfirm"
                     validate={[required, nonEmpty, matchesPassword]}
                 />
-                <button type="submit">
+                <button 
+                    type="submit"
+                    className='colored'
+                >
                     Register
                 </button>
             </form>

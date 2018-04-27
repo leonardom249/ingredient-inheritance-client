@@ -6,6 +6,7 @@ import LogoutButton from './logout-button';
 import AddRecipeForm from './form';
 import RecipeList from './recipe-list';
 import CreateButton from './create-button';
+import '../component-css/buttons-nav.css';
 
 
 import {connect} from 'react-redux';
@@ -21,8 +22,9 @@ function RecipePage (props) {
             <Header/>
         <nav>
             <Button/>
-            <LogoutButton/>
             <CreateButton />
+            <LogoutButton/>
+
         </nav>
         <div className="recipe-form">
             <AddRecipeForm />

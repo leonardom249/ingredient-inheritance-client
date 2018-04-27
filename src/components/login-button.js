@@ -4,7 +4,7 @@ import { switchToLogin } from '../actions/actions';
 
 function LoginButton(props){
     return(
-        <div className="login-button">
+        <div className='colored'>
             <p>Already Have An Account? </p>
             <button
                 onClick={()=> props.dispatch(switchToLogin())}

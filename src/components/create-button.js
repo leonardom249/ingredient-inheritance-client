@@ -7,7 +7,7 @@ import {reset} from 'redux-form';
 function CreateButton(props){
     
     return(
-        <button
+        <button className='colored'
             onClick={()=> 
                 {
                     props.dispatch(createNewRecipe());

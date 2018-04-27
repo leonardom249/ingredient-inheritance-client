@@ -1,0 +1,56 @@
+
+nav {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+    border-bottom: 1px solid black;
+}
+
+nav button {
+    margin-right:10px;
+}
+
+div .recipe-form{
+    float: right;
+}
+
+button.colored {
+    width: 100%;
+    margin-bottom: 10px;
+    background-color: #ff5c33;
+    color: #fff!important;
+    text-shadow: 1px 1px 0 #444;
+}
+
+button.delete-button {
+    width: 25%;
+    margin-bottom: 10px;
+    background-color: #ff5c33;
+    color: #fff!important;
+    text-shadow: 1px 1px 0 #444;
+    margin-left: 20px;
+}
+
+/* 
+
+@media only screen and (min-width: 768px) {
+    header div  {
+        width: 33.33%
+    }
+    
+    header h1 {
+        width: 33.33%
+    }
+} 
+
+/* Large devices (laptops/desktops, 992px and up) */
+/* @media only screen and (min-width: 992px) {
+    header div  {
+        width: 33.33%
+    }
+    
+    header h1 {
+        width: 33.33%
+    }
+}
+ */ 

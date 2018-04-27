@@ -6,9 +6,9 @@ export default function Header (){
     return(
         <div>
             <header>
-                <span className='header'><em>A place to store recipes passed down through generations...</em></span>
+                <div className='one'><em>A place to store recipes passed down through generations...</em></div>
                 <h1 className='header'>Ingredient Inheritance</h1>
-                <span className='header'><em>for the sake of food and family.</em></span>
+                <div className='two'><em>for the sake of food and family.</em></div>
 
             </header>
         </div>

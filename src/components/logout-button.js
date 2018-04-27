@@ -5,7 +5,7 @@ import { switchToLogin } from '../actions/actions';
 
 function LogoutButton(props){
     return(
-        <button
+        <button className='colored'
             onClick={()=> {
                 props.dispatch(clearAuth())
                 props.dispatch(switchToLogin())
