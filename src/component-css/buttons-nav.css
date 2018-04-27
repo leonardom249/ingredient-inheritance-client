@@ -1,13 +1,19 @@
 
+div.recipe-page{
+    width: 100%
+}
 nav {
     margin-bottom: 20px;
     padding-bottom: 20px;
     text-align: center;
     border-bottom: 1px solid black;
+    display: flex;
+    justify-content: center;
 }
 
 nav button {
-    margin-right:10px;
+    margin-right:5px;
+    margin-left: 5px;
 }
 
 div .recipe-form{
@@ -31,26 +37,25 @@ button.delete-button {
     margin-left: 20px;
 }
 
-/* 
+ 
 
 @media only screen and (min-width: 768px) {
-    header div  {
-        width: 33.33%
+    button.colored  {
+        width: 20%
     }
     
-    header h1 {
-        width: 33.33%
+    button.delete-button {
+        width: 10%
     }
 } 
 
 /* Large devices (laptops/desktops, 992px and up) */
-/* @media only screen and (min-width: 992px) {
-    header div  {
-        width: 33.33%
+@media only screen and (min-width: 992px) {
+    button.colored  {
+        width: 10%
     }
     
-    header h1 {
-        width: 33.33%
+    button.delete-button {
+        width: 5%
     }
 }
- */ 
