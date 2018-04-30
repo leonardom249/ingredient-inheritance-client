@@ -19,13 +19,15 @@ function RecipePage (props) {
     
     return(
       <div className="recipe-page">
-            <Header/>
-        <nav>
-            <Button/>
-            <CreateButton />
-            <LogoutButton/>
+        <div className="top-background">
+                <Header/>
+            <nav>
+                <Button/>
+                <CreateButton />
+                <LogoutButton/>
 
-        </nav>
+            </nav>
+        </div>
         <div className="recipe-form-list">
             <AddRecipeForm />
             <RecipeList />

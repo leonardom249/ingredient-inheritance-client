@@ -13,6 +13,10 @@ class recipeList extends React.Component{
         console.log(this.props.recipes);
 
         const recipeList = this.props.recipes.map((recipe, index)=>{
+            let title= recipe.title
+            if(title.length>8){
+                title = title.substring(0,8);
+            }
             return(
                 <li key={recipe._id}> 
                     <a 
@@ -23,7 +27,7 @@ class recipeList extends React.Component{
                             console.log(this.props.initialValues)
                         }}
                     >
-                        {`${recipe.title}   `}
+                        {`${title}   `}
                     </a> 
 
                     <button 

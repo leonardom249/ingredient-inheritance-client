@@ -5,12 +5,12 @@ div.recipe-list{
 
 @media only screen and (min-width: 768px) {
     div.recipe-list{
-        margin-left: 50px;
+        margin-left: 0px;
     }
 } 
 
  @media only screen and (min-width: 992px) {
     div.recipe-list{
-
+        margin-left: 30px;
     } 
 }
