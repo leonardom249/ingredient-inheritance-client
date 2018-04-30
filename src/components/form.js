@@ -35,9 +35,10 @@ export class AddrecipeForm extends React.Component{
                     this.onSubmit(values)
             )}
             >
-            <label><strong>Title:</strong>
+            <label><p><strong>Title:</strong></p>
                 <Field 
                     component={Input}
+                    className="field"
                     type="text"
                     name="title"
                     size="40"
@@ -46,9 +47,10 @@ export class AddrecipeForm extends React.Component{
                 />
             </label>
             <br/>
-            <label><strong>Ingredients:</strong>
+            <label><p><strong>Ingredients:</strong></p>
                 <Field 
                     component={TextArea}
+                    className="field"
                     type="text"
                     name="ingredients"
                     placeholder="Ex: 6 cans crushed tomatoes..."
@@ -59,9 +61,10 @@ export class AddrecipeForm extends React.Component{
                 />
             </label>
             <br/>
-            <label><strong>Recipe:</strong>
+            <label><p><strong>Recipe:</strong></p>
                 <Field 
                     component={TextArea}
+                    className="field"
                     type="text"
                     name="recipe"
                     placeholder="Ex: Step 1. Crush garlic"

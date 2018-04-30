@@ -2,15 +2,17 @@
 
 
 form.recipe-form {
-    margin: 0 auto;
-    max-width: 50em;
-    float: right;
+    margin-right: 10px;
+    margin-left: 10px;
+
+    /* max-width: 50em; */
     font-family: 'Playfair Display', sans-serif;
   }
 
 form.login-form{
     text-align: center;
 }
+
 
 div.register{
     text-align: center;
@@ -22,6 +24,8 @@ div.register{
     form.recipe-form { 
         margin-right: 50px;
         margin-left: 50px;
+        float: right;
+
        }
 
 } 

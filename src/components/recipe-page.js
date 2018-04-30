@@ -6,7 +6,7 @@ import LogoutButton from './logout-button';
 import AddRecipeForm from './form';
 import RecipeList from './recipe-list';
 import CreateButton from './create-button';
-import '../component-css/buttons-nav.css';
+import '../component-css/main.css';
 
 
 import {connect} from 'react-redux';

@@ -6,7 +6,7 @@ import LoginButton from './login-button';
 import Header from './header';
 import RegisterButton from './register-button';
 import {connect} from 'react-redux';
-import '../component-css/buttons-nav.css';
+import '../component-css/main.css';
 
 
 

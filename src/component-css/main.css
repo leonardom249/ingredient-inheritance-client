@@ -7,11 +7,11 @@ html, body{
 
 
 div.top-background{
-    border: 10px solid black;
+    border: 5px solid black;
     background: 
     linear-gradient(
-        rgba(252, 248, 248, 0.45), 
-      rgba(252, 248, 248, 0.45)
+        rgba(255, 255, 255, 0.767),
+        rgba(255, 255, 255, 0.767)
     ),
     url("https://visitindianrivercounty.com/wp-content/uploads/2015/12/restaurant-week-e1470145972197.jpg");
     background-repeat: no-repeat;
@@ -24,7 +24,6 @@ div.recipe-page{
 
 
 nav {
-    margin-bottom: 20px;
     padding-bottom: 20px;
     text-align: center;
     display: flex;
@@ -34,6 +33,10 @@ nav {
 nav button {
     margin-right:5px;
     margin-left: 5px;
+}
+
+h2{
+    font-size: 20px;
 }
 
 ul{
@@ -58,7 +61,7 @@ a:active {
 button.colored {
     width: 100%;
     margin-bottom: 10px;
-    background-color: #ff5c33;
+    background-color:#AD210B;
     color: #fff!important;
     text-shadow: 1px 1px 0 #444;
 }
@@ -66,7 +69,7 @@ button.colored {
 button.delete-button {
     width: 25%;
     margin-bottom: 10px;
-    background-color: #ff5c33;
+    background-color:#AD210B;
     color: #fff!important;
     text-shadow: 1px 1px 0 #444;
     margin-left: 20px;
