@@ -1,0 +1,10 @@
+div.login-header{
+    background: 
+    linear-gradient(
+        rgba(252, 248, 248, 0.45), 
+      rgba(252, 248, 248, 0.45)
+    ),
+    url("https://visitindianrivercounty.com/wp-content/uploads/2015/12/restaurant-week-e1470145972197.jpg");
+    background-repeat: no-repeat;
+    background-position: right top;
+}

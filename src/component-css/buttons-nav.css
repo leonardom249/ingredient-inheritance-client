@@ -1,6 +1,13 @@
 @import url('https://fonts.googleapis.com/css?family=Playfair+Display');
 
+html, body{
+    margin: 0;
+    padding: 0;
+}
+
+
 div.top-background{
+    /* border: 10px solid black; */
     background: 
     linear-gradient(
         rgba(252, 248, 248, 0.45), 
@@ -8,16 +15,12 @@ div.top-background{
     ),
     url("https://visitindianrivercounty.com/wp-content/uploads/2015/12/restaurant-week-e1470145972197.jpg");
     background-repeat: no-repeat;
-    background-position: right top;
+    background-size: cover;
 }
-
-    
-
 
 
 div.recipe-page{
     width: 100%;
-   
 }
 
 
@@ -25,7 +28,6 @@ nav {
     margin-bottom: 20px;
     padding-bottom: 20px;
     text-align: center;
-    border-bottom: 1px solid black;
     display: flex;
     justify-content: center;
 }
