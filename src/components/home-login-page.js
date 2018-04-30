@@ -7,7 +7,6 @@ import Header from './header';
 import RegisterButton from './register-button';
 import {connect} from 'react-redux';
 import '../component-css/buttons-nav.css';
-import '../component-css/home-login.css';
 
 
 
@@ -19,7 +18,7 @@ function HomeLoginPage (props) {
     if(props.register===false){ 
       return(
             <div>
-              <div classname="login-header">
+              <div className="top-background">
                 <Header />
               </div>
               <LoginForm/>
@@ -29,7 +28,7 @@ function HomeLoginPage (props) {
     if(props.register===true){ 
       return(
             <div>
-            <div classname="login-header">
+            <div className="top-background">
                 <Header />
               </div>
               <RegistrationForm/>
