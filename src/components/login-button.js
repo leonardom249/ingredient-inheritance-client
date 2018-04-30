@@ -2,11 +2,13 @@ import React from 'react';
 import {connect} from 'react-redux';
 import { switchToLogin } from '../actions/actions';
 
+
+
 function LoginButton(props){
     return(
-        <div className='colored'>
+        <div className="register login">
             <p>Already Have An Account? </p>
-            <button
+            <button className="colored"
                 onClick={()=> props.dispatch(switchToLogin())}
             >
             Go To Login</button>

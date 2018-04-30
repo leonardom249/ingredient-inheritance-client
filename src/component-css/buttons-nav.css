@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display');
+
+
 
 div.recipe-page{
     width: 100%
@@ -16,8 +19,23 @@ nav button {
     margin-left: 5px;
 }
 
-div .recipe-form{
-    float: right;
+ul{
+    list-style: none;
+}
+a:link {
+    text-decoration: none;
+    color: black;
+    font-family: 'Playfair Display', sans-serif;
+
+
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:active {
+    text-decoration: underline;
 }
 
 button.colored {
@@ -52,7 +70,7 @@ button.delete-button {
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
     button.colored  {
-        width: 10%
+        width: 20%
     }
     
     button.delete-button {

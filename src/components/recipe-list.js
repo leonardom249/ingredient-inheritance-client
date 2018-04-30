@@ -1,6 +1,8 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import { fetchrecipes, setInitialValues, deleteRecipe } from '../actions/actions';
+import '../component-css/recipe-list.css';
+
 
 class recipeList extends React.Component{ 
     componentDidMount(){
@@ -37,7 +39,7 @@ class recipeList extends React.Component{
             )
         })
         return(
-            <div>
+            <div className="recipe-list">
                 <h4>My Family Recipes</h4>
                 <ul>
                     {recipeList}

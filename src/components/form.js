@@ -5,6 +5,8 @@ import {required, nonEmpty} from '../validators';
 import { connect } from 'react-redux';
 import Input from './input';
 import TextArea from './textarea-input';
+import '../component-css/form.css';
+
 
 
 export class AddrecipeForm extends React.Component{ 
@@ -28,7 +30,7 @@ export class AddrecipeForm extends React.Component{
     render(){
         console.log(this.props)
         return(
-            <form
+            <form className="recipe-form"
                 onSubmit={this.props.handleSubmit(values =>
                     this.onSubmit(values)
             )}
@@ -38,7 +40,7 @@ export class AddrecipeForm extends React.Component{
                     component={Input}
                     type="text"
                     name="title"
-                    size="48"
+                    size="40"
                     placeholder="Ex: Uncle Bob's Chili..."
                     validate={[required, nonEmpty]}
                 />
@@ -51,7 +53,7 @@ export class AddrecipeForm extends React.Component{
                     name="ingredients"
                     placeholder="Ex: 6 cans crushed tomatoes..."
                     rows="10" 
-                    cols="50"
+                    cols="40"
                     validate={[required, nonEmpty]}
 
                 />
@@ -64,7 +66,7 @@ export class AddrecipeForm extends React.Component{
                     name="recipe"
                     placeholder="Ex: Step 1. Crush garlic"
                     rows="20" 
-                    cols="50"
+                    cols="40"
                     validate={[required, nonEmpty]}
 
                 />

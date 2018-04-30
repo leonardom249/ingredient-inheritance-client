@@ -5,6 +5,8 @@ import RecipePage from './recipe-page';
 
 
 
+
+
 class MainPage extends Component {
     render() {
         if(this.props.instructions === true){
@@ -17,8 +19,8 @@ class MainPage extends Component {
         else if (this.props.instructions === false){
         return(
           <div className="App">
-          <RecipePage />
-        </div>
+            <RecipePage />
+          </div>
         );
       }
     }

@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display');
+
+
+form.recipe-form {
+    margin: 0 auto;
+    max-width: 50em;
+    float: right;
+    font-family: 'Playfair Display', sans-serif;
+  }
+
+form.login-form{
+    text-align: center;
+}
+
+div.register{
+    text-align: center;
+
+}
+ 
+
+  @media only screen and (min-width: 768px) {
+    form.recipe-form { 
+        margin-right: 50px;
+        margin-left: 50px;
+       }
+
+} 
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    form.recipe-form { 
+        margin-right: 300px;
+        margin-left: 20px;
+       }
+}

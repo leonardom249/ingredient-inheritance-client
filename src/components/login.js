@@ -5,6 +5,7 @@ import {required, nonEmpty} from '../validators';
 import Input from './input';
 
 
+
 export class LoginForm extends React.Component {
     onSubmit(values) {
         return this.props.dispatch(login(values.username, values.password));
@@ -43,7 +44,10 @@ export class LoginForm extends React.Component {
                     id="password"
                     validate={[required, nonEmpty]}
                 />
-                <button disabled={this.props.pristine || this.props.submitting}>
+                <button 
+                    className="colored"
+                    disabled={this.props.pristine || this.props.submitting}
+                >
                     Log in
                 </button>
             </form>

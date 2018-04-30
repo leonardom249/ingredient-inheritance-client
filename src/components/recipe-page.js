@@ -26,10 +26,11 @@ function RecipePage (props) {
             <LogoutButton/>
 
         </nav>
-        <div className="recipe-form">
+        <div className="recipe-form-list">
             <AddRecipeForm />
-        </div>
             <RecipeList />
+        </div>
+
       </div>
     )
 }

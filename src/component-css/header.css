@@ -1,8 +1,11 @@
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display');
+
+
 header {
     text-align: center;
     margin-top: 50px;
     padding-bottom: 20px;
-    /* display: flex; */
+    font-family: 'Playfair Display', sans-serif;
 }
 
 header div  {
@@ -31,14 +34,7 @@ header h1 {
     }
 } 
 
-/* Large devices (laptops/desktops, 992px and up) */
-/* @media only screen and (min-width: 992px) {
-    header div  {
-        width: 33.33%
-    }
-    
-    header h1 {
-        width: 33.33%
-    }
+ @media only screen and (min-width: 992px) {
+  
 }
- */ 
+ 
