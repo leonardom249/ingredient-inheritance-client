@@ -5,6 +5,10 @@ html, body{
     padding: 0;
 }
 
+body{
+    background: grey;
+}
+
 
 div.top-background{
     border: 5px solid black;
@@ -14,7 +18,7 @@ div.top-background{
         rgba(255, 255, 255, 0.767)
     ),
     url("https://visitindianrivercounty.com/wp-content/uploads/2015/12/restaurant-week-e1470145972197.jpg");
-    background-repeat: no-repeat;
+    background-repeat: repeat;
 }
 
 
