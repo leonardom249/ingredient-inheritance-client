@@ -70,6 +70,15 @@ button.colored {
     text-shadow: 1px 1px 0 #444;
 }
 
+button.save-button{
+    width: 100%;
+    margin-bottom: 10px;
+    background-color:black;
+    color: #fff!important;
+    text-shadow: 1px 1px 0 #444;
+    border-radius: 5px;
+}
+
 button.delete-button {
     width: 25%;
     margin-bottom: 10px;
@@ -85,6 +94,9 @@ button.delete-button {
     button.colored  {
         width: 20%
     }
+    button.save-button  {
+        width: 20%
+    }
     
     button.delete-button {
         width: 10%
@@ -97,7 +109,11 @@ button.delete-button {
         width: 20%
     }
     
+    button.save-button  {
+        width: 20%
+    }
+    
     button.delete-button {
-        width: 5%
+        width: 10%
     }
 }
