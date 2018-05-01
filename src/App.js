@@ -3,10 +3,32 @@ import MainPage from './components/main-page';
 import HomeLoginPage from './components/home-login-page';
 import {Route, withRouter} from 'react-router-dom';
 import {connect} from 'react-redux';
-import {refreshAuthToken} from './actions/auth';
+import {refreshAuthToken, clearAuth, almostTimeout, backToLogin} from './actions/auth';
 
 
 class App extends Component {
+
+    componentDidMount(){
+        let timeOut;
+        let alertTimeOut;
+        document.addEventListener('click', ()=>{
+            clearTimeout(alertTimeOut);
+           alertTimeOut=
+           setTimeout(()=>{
+                console.log('times almost up');
+                this.props.dispatch(almostTimeout())
+                console.log(this.props.dialogAlert)
+            }, .25 * 60* 1000)
+
+            clearTimeout(timeOut);
+           timeOut=
+             setTimeout(()=>{
+                console.log('time')
+                this.props.dispatch(clearAuth())
+                this.props.dispatch(backToLogin())
+            }, .5 * 60* 1000)
+        })
+    }
 
   componentDidUpdate(prevProps) {
     if (!prevProps.loggedIn && this.props.loggedIn) {
@@ -36,6 +58,7 @@ class App extends Component {
 
 
   render() {
+    
     return(
       <div className="full-app">
         <Route exact path='/' component={HomeLoginPage} />
@@ -46,7 +69,8 @@ class App extends Component {
 }
 
 const mapStateToProps = state => ({
-  loggedIn: state.auth.currentUser !== null
+  loggedIn: state.auth.currentUser !== null,
+  dialogAlert: state.auth.dialogAlert
 });
 
 export default withRouter(connect(mapStateToProps)(App));

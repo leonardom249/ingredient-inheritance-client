@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import Instructions from './instructions';
 import {connect} from 'react-redux';
 import RecipePage from './recipe-page';
+import TimerAlert from './timer-alert';
+
 
 
 
@@ -16,6 +18,11 @@ class MainPage extends Component {
             </div>
           )
         }
+        if(this.props.dialogAlert === true){
+          return(
+              <TimerAlert />
+          )
+      }
         else if (this.props.instructions === false){
         return(
           <div className="App">
@@ -27,7 +34,8 @@ class MainPage extends Component {
   }
   
   const mapStateToProps = (state) =>({
-    instructions: state.recipe.instructions
+    instructions: state.recipe.instructions,
+    dialogAlert: state.auth.dialogAlert
   })
   
   export default connect(mapStateToProps)(MainPage)

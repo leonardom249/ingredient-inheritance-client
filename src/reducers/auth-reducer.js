@@ -7,8 +7,8 @@ import {
     AUTH_REQUEST,
     AUTH_SUCCESS,
     AUTH_ERROR,
-    // ALMOST_TIMEOUT,
-    // BACK_TO_LOGIN
+    ALMOST_TIMEOUT,
+    BACK_TO_LOGIN
 } from '../actions/auth';
 
 
@@ -24,7 +24,7 @@ const initialState = {
     currentUser,
     loading: false,
     error: null,
-    // dialogAlert: false,
+    dialogAlert: false,
     time: 5000,
     userId: null
 };
@@ -58,15 +58,15 @@ export default (state = initialState, action) => {
             error: action.error
         });
      }
-    //else if (action.type === ALMOST_TIMEOUT) {
-    //     return Object.assign({}, state, {
-    //         dialogAlert: true
-    //     });
-    // }
-    // else if (action.type === BACK_TO_LOGIN) {
-    //     return Object.assign({}, state, {
-    //         dialogAlert: false
-    //     });
-    // }
+    else if (action.type === ALMOST_TIMEOUT) {
+        return Object.assign({}, state, {
+            dialogAlert: true
+        });
+    }
+    else if (action.type === BACK_TO_LOGIN) {
+        return Object.assign({}, state, {
+            dialogAlert: false
+        });
+    }
     return state;
 }
