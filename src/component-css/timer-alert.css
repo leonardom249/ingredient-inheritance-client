@@ -1,0 +1,25 @@
+div.timer-alert{
+    background: #AD210B;
+    margin:10px;
+    color: white;
+    text-align: center;
+}
+
+button.timer-alert{
+    width: 50%;
+    margin-bottom: 10px;
+    background-color:grey;
+    color: black!important;
+    text-shadow: 1px 1px 0 #444;
+    border-radius: 5px;
+}
+
+@media only screen and (min-width: 992px) {
+    div.timer-alert{
+        font-size: 20px;
+    }
+    
+    button.timer-alert{
+       font-size: 20px
+    }
+}
