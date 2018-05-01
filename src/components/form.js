@@ -76,7 +76,7 @@ export class AddrecipeForm extends React.Component{
             </label>
 
                 <br/>
-                <button className='save-button' id="save-button" type="submit">Save</button>
+                <button className='form-button'  type="submit">Save</button>
             </form>
         )
     }

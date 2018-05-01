@@ -51,7 +51,7 @@ export class RegistrationForm extends React.Component {
                 />
                 <button 
                     type="submit"
-                    className='colored'
+                    className='form-button'
                 >
                     Register
                 </button>

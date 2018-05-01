@@ -50,7 +50,7 @@ export class LoginForm extends React.Component {
                 </label>
                 <br/>
                 <button 
-                    className="colored"
+                    className='form-button'
                     disabled={this.props.pristine || this.props.submitting}
                 >
                     Log in

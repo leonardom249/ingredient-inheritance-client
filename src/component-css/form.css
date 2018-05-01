@@ -16,6 +16,17 @@ form.recipe-form {
 
 form.login-form{
     text-align: center;
+    margin-right: 1px;
+    margin-left: 1px;
+    padding-right: 5px;
+    padding-left: 5px;
+    border: 3px solid black;
+    border-radius: 20px;
+    background: #AD210B;
+    font-weight: bold;
+
+    /* max-width: 50em; */
+    font-family: 'Playfair Display', sans-serif;
 }
 
 
@@ -34,6 +45,12 @@ div.register{
         float: right;
 
        }
+       form.login-form { 
+        margin-right: 200px;
+        margin-left: 200px;
+        padding-right: 20px;
+        padding-left: 20px;
+       }
 
 } 
 
@@ -41,6 +58,12 @@ div.register{
     form.recipe-form { 
         margin-right: 100px;
         margin-left: 20px;
+        padding-right: 50px;
+        padding-left: 50px;
+       }
+       form.login-form { 
+        margin-right: 250px;
+        margin-left: 250px;
         padding-right: 50px;
         padding-left: 50px;
        }
