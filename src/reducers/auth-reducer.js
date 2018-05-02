@@ -36,6 +36,7 @@ export default (state = initialState, action) => {
         });
     } else if (action.type === CLEAR_AUTH) {
         clearAuthToken();
+        console.log('made it to clearAuth reducer/action')
         return Object.assign({}, state, {
             authToken: null,
             currentUser: null
