@@ -46,7 +46,7 @@ export class AddrecipeForm extends React.Component{
                     validate={[required, nonEmpty]}
                 />
             </label>
-            <br/>
+            
             <label><p><strong>Ingredients:</strong></p>
                 <Field 
                     component={TextArea}
@@ -54,13 +54,13 @@ export class AddrecipeForm extends React.Component{
                     type="text"
                     name="ingredients"
                     placeholder="Ex: 6 cans crushed tomatoes..."
-                    rows="10" 
                     cols="40"
                     validate={[required, nonEmpty]}
+                    id="ingredients-size"
 
                 />
             </label>
-            <br/>
+            
             <label><p><strong>Recipe:</strong></p>
                 <Field 
                     component={TextArea}
@@ -68,7 +68,7 @@ export class AddrecipeForm extends React.Component{
                     type="text"
                     name="recipe"
                     placeholder="Ex: Step 1. Crush garlic"
-                    rows="20" 
+                    id="recipe-size"
                     cols="40"
                     validate={[required, nonEmpty]}
 

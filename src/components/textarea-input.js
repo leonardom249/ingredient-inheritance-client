@@ -30,6 +30,7 @@ export default class TextArea extends React.Component {
                     {...this.props.input}
                     type={this.props.type}
                     placeholder={this.props.placeholder}
+                    id={this.props.id}
                     rows={this.props.rows}
                     cols={this.props.cols}
                     ref={textarea => (this.textarea = textarea)}

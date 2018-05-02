@@ -20,7 +20,7 @@ class recipeList extends React.Component{
             return(
                 <li key={recipe._id}> 
                     <a 
-                        href={`#${recipe._id}`}
+                        href={recipe._id}
                         onClick={(e)=>{
                             e.preventDefault();
                             this.props.dispatch(setInitialValues(recipe._id, recipe.title));

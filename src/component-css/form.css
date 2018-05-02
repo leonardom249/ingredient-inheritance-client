@@ -9,6 +9,7 @@ form.recipe-form {
     border: 3px solid black;
     border-radius: 20px;
     background: #AD210B;
+    color: white;
 
     /* max-width: 50em; */
     font-family: 'Playfair Display', sans-serif;
@@ -24,9 +25,14 @@ form.login-form{
     border-radius: 20px;
     background: #AD210B;
     font-weight: bold;
+    color:white;
 
     /* max-width: 50em; */
     font-family: 'Playfair Display', sans-serif;
+}
+
+#ingredients-size, #recipe-size{
+    height:5em;
 }
 
 
@@ -51,6 +57,9 @@ div.register{
         padding-right: 20px;
         padding-left: 20px;
        }
+       #ingredients-size, #recipe-size{
+        height:10em;
+    }
 
 } 
 
@@ -67,6 +76,9 @@ div.register{
         padding-right: 50px;
         padding-left: 50px;
        }
+       #ingredients-size, #recipe-size{
+        height:20em;
+    }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
