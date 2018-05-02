@@ -1,5 +1,6 @@
 import {API_BASE_URL} from '../config';
 import {normalizeResponseErrors} from './normalize-errors';
+import { clearAuth } from './auth';
 
 
 export const FETCH_RECIPE_REQUEST='FETCH_RECIPE_REQUEST'
@@ -85,6 +86,8 @@ export const fetchrecipes =()=>(dispatch, getState)=>{
         .then(recipes=> dispatch(fetchrecipeSuccess(recipes)))
         .catch(err=> {
             console.log(err);
+            //mentor notes: added below to try and redirect to login if person has expired token
+            dispatch(clearAuth());
             dispatch(fetchrecipeError(err))
         })
     

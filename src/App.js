@@ -54,6 +54,7 @@ class App extends Component {
             return;
         }
         clearInterval(this.refreshInterval);
+        this.props.dispatch(clearAuth());
     }
 
 

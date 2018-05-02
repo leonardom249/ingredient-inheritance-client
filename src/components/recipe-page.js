@@ -13,7 +13,10 @@ import {connect} from 'react-redux';
 
 
 function RecipePage (props) {
-    if(!props.userLoggedIn){
+    console.log('recipe page', props.loggedIn);
+    
+    if(!props.loggedIn){
+        console.log('hit redirect to / in recipe page');
         return <Redirect to='/'/>
     }
     
@@ -38,7 +41,7 @@ function RecipePage (props) {
 }
 
 const mapStateToProps = (state) =>({
-   userLoggedIn: state.auth.currentUser
+   loggedIn: state.auth.currentUser
   })
   
   export default connect(mapStateToProps)(RecipePage)
