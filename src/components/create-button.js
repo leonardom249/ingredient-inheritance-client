@@ -4,7 +4,7 @@ import {connect} from 'react-redux';
 import {reset} from 'redux-form';
 
 
-function CreateButton(props){
+export function CreateButton(props){
     
     return(
         <button className='colored'

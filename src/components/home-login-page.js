@@ -11,7 +11,7 @@ import '../component-css/main.css';
 
 
 
-function HomeLoginPage (props) {
+export function HomeLoginPage (props) {
     if(props.userLoggedIn){
         return <Redirect to='/mainpage'/>
     }

@@ -3,7 +3,7 @@ import { toggleInstructionsOn } from '../actions/actions';
 import {connect} from 'react-redux';
 
 
-function Button(props){
+export function Button(props){
     
     return(
         <button className='colored'

@@ -9,7 +9,7 @@ import '../component-css/form.css';
 
 
 
-export class AddrecipeForm extends React.Component{ 
+export class NotConnectedAddrecipeForm extends React.Component{ 
     componentDidMount(){
         console.log('form component did mount running, dispatching create New Recipe');
         this.props.dispatch(createNewRecipe());
@@ -42,6 +42,7 @@ export class AddrecipeForm extends React.Component{
                     type="text"
                     name="title"
                     size="40"
+                    id='title'
                     placeholder="Ex: Uncle Bob's Chili..."
                     validate={[required, nonEmpty]}
                 />
@@ -83,11 +84,11 @@ export class AddrecipeForm extends React.Component{
 }
 
   
-  AddrecipeForm = reduxForm({
+  let AddrecipeForm = reduxForm({
     form: 'recipe',
     enableReinitialize: true
-  })(AddrecipeForm)
-  
+  })(NotConnectedAddrecipeForm)
+   
   
   AddrecipeForm = connect(
     state => ({
