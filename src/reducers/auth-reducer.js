@@ -11,7 +11,7 @@ import {
     BACK_TO_LOGIN
 } from '../actions/auth';
 
-
+console.log('more of anything')
 let authToken = loadAuthToken();
 let currentUser;
 if(authToken){
