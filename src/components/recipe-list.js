@@ -4,7 +4,7 @@ import { setInitialValues, deleteRecipe } from '../actions/actions';
 import '../component-css/recipe-list.css';
 
 
-class recipeList extends React.Component{ 
+export class recipeList extends React.Component{ 
     
     render(){
         console.log('recipe-list-props.recipes', this.props.recipes);
@@ -18,6 +18,7 @@ class recipeList extends React.Component{
                 <li key={recipe._id}> 
                     <a 
                         href={recipe._id}
+                        id="link"
                         onClick={(e)=>{
                             e.preventDefault();
                             this.props.dispatch(setInitialValues(recipe._id, recipe.title));

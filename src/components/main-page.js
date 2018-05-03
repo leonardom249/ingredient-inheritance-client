@@ -10,7 +10,7 @@ import { fetchrecipes } from '../actions/actions';
 
 
 
-class MainPage extends Component {
+export class MainPage extends Component {
   componentDidMount(){
         if(!this.props.loading){
           this.props.dispatch(fetchrecipes())

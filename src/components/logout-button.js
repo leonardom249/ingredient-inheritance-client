@@ -3,7 +3,7 @@ import {connect} from 'react-redux';
 import { clearAuth } from '../actions/auth';
 import { switchToLogin } from '../actions/actions';
 
-function LogoutButton(props){
+export function LogoutButton(props){
     return(
         <button className='colored'
             onClick={()=> {

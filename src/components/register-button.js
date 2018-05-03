@@ -2,7 +2,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 import { switchToRegister } from '../actions/actions';
 
-function RegisterButton(props){
+export function RegisterButton(props){
     return(
         <div className="register">
             <p>Don't Have An Account Yet?</p>
