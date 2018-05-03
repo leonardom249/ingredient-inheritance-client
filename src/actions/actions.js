@@ -87,7 +87,27 @@ export const fetchrecipes =()=>(dispatch, getState)=>{
         .catch(err=> {
             console.log(err);
             console.log('made it to fetch recipe catch err')
-            //mentor notes: added below to try and redirect to login if person has expired token
+            dispatch(clearAuth())
+            dispatch(backToLogin())
+            dispatch(fetchrecipeError(err))
+        })
+    
+}
+
+export const fetchrecipesForOtherFunctions =()=>(dispatch, getState)=>{
+    const authToken = getState().auth.authToken;
+    fetch(`${API_BASE_URL}/api/recipes`, {
+        headers: {
+            Authorization: `Bearer ${authToken}`
+        }
+    })
+        .then(res => 
+            res.json()
+        )
+        .then(recipes=> dispatch(fetchrecipeSuccess(recipes)))
+        .catch(err=> {
+            console.log(err);
+            console.log('made it to fetch recipe catch err')
             dispatch(clearAuth())
             dispatch(backToLogin())
             dispatch(fetchrecipeError(err))
@@ -143,7 +163,7 @@ export const updateRecipePost=(id, title, ingredients, recipe)=> (dispatch, getS
     })
         .then(res => normalizeResponseErrors(res))
         .then(res => res.json())
-        .then(recipes=> dispatch(fetchrecipes()))
+        .then(recipes=> dispatch(fetchrecipesForOtherFunctions()))
         // .then((body) => console.log(body))
         .catch(err => console.error(err));
 }
@@ -156,7 +176,7 @@ export const deleteRecipe =(id)=>(dispatch, getState)=>{
             Authorization: `Bearer ${authToken}`
         }
     })
-        .then(recipes=> dispatch(fetchrecipes()))
+        .then(recipes=> dispatch(fetchrecipesForOtherFunctions()))
         .catch(err=> {
             console.log(err);
         })

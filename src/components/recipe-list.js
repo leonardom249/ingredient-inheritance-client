@@ -1,16 +1,13 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import { fetchrecipes, setInitialValues, deleteRecipe } from '../actions/actions';
+import { setInitialValues, deleteRecipe } from '../actions/actions';
 import '../component-css/recipe-list.css';
 
 
 class recipeList extends React.Component{ 
-    componentDidMount(){
-        this.props.dispatch(fetchrecipes())
-    }
     
     render(){
-        console.log(this.props.recipes);
+        console.log('recipe-list-props.recipes', this.props.recipes);
 
         const recipeList = this.props.recipes.map((recipe, index)=>{
             let title= recipe.title
@@ -55,6 +52,7 @@ class recipeList extends React.Component{
 }
 
 const mapStateToProps = (state) =>({
+    loading: state.recipe.loading,
     recipes: state.recipe.recipes,
     initialValues: state.recipe.initialValues
 })

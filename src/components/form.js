@@ -11,7 +11,7 @@ import '../component-css/form.css';
 
 export class AddrecipeForm extends React.Component{ 
     componentDidMount(){
-        console.log('did mount running');
+        console.log('form component did mount running, dispatching create New Recipe');
         this.props.dispatch(createNewRecipe());
     }
     
@@ -28,7 +28,7 @@ export class AddrecipeForm extends React.Component{
     }
     
     render(){
-        console.log(this.props)
+        console.log('form rendering, here are props in render', this.props)
         return(
             <form className="recipe-form"
                 onSubmit={this.props.handleSubmit(values =>
