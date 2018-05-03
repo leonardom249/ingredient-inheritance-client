@@ -1,5 +1,5 @@
 import recipeReducer from './recipe';
-import { fetchrecipeSuccess, fetchrecipeRequest, fetchrecipeError, addrecipe } from '../actions/actions';
+import { fetchrecipeSuccess, fetchrecipeRequest, fetchrecipeError, addrecipe, toggleInstructionsOff, toggleInstructionsOn, switchToRegister, switchToLogin, setInitialValues, createNewRecipe } from '../actions/actions';
 
 describe('recipeReducer', () => {
     it('Should set the initial state when nothing is passed in', () => {
@@ -89,6 +89,96 @@ describe('recipeReducer', () => {
             error: null
         });
     });
+    it('Should handle the toggleInstructionsOn action', () => {
+        const state = {
+            error: null,
+            loading: false,
+            instructions: false
+        };
+        const newState = recipeReducer(state, toggleInstructionsOn());
 
+        expect(newState).toEqual({
+            error: null,
+            loading: false,
+            instructions: true
+        });
+    });
+    it('Should handle the toggleInstructionsOff action', () => {
+        const state = {
+            error: null,
+            loading: false,
+            instructions: false
+        };
+        const newState = recipeReducer(state, toggleInstructionsOff());
+
+        expect(newState).toEqual({
+            error: null,
+            loading: false,
+            instructions: false
+        });
+    });
+    it('Should handle the switchToRegister action', () => {
+        const state = {
+            register: false
+        };
+        const newState = recipeReducer(state, switchToRegister());
+
+        expect(newState).toEqual({
+            register: true
+        });
+    });
+    it('Should handle the switchToLogin action', () => {
+        const state = {
+            register: true
+        };
+        const newState = recipeReducer(state, switchToLogin());
+
+        expect(newState).toEqual({
+            register: false
+        });
+    });
+    it('Should handle the setInitialValues action', () => {
+        const state = {
+            recipes:[{'_id':'123', 'title':'test2', 'ingredients':'test', 'recipe':'test'}, {'title':'test', 'ingredients':'test', 'recipe':'test'}],
+            initialValues: {
+              _id:'',
+              title: '',
+              ingredients: '',
+              recipe: ''
+            }
+        };
+        const newState = recipeReducer(state, setInitialValues('123'));
+
+        expect(newState).toEqual({
+            recipes:[{'_id':'123', 'title':'test2', 'ingredients':'test', 'recipe':'test'}, {'title':'test', 'ingredients':'test', 'recipe':'test'}],
+
+            initialValues: {
+                _id:'123',
+                title: 'test2',
+                ingredients: 'test',
+                recipe: 'test'
+              }
+        });
+    });
+    it('Should handle the createNewRecipe action', () => {
+        const state = {
+            initialValues: {
+                _id:'123',
+                title: 'test2',
+                ingredients: 'test',
+                recipe: 'test'
+              }
+        };
+        const newState = recipeReducer(state, createNewRecipe());
+
+        expect(newState).toEqual({
+            initialValues: {
+                _id:'',
+                title: '',
+                ingredients: '',
+                recipe: ''
+              }
+        });
+    });
 
 });
