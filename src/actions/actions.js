@@ -62,7 +62,7 @@ export const switchToLogin=()=>({
 //     recipe
 // })
 
-const LOAD='LOAD'
+export const LOAD='LOAD'
 export const load = data => ({ type: LOAD, data })
 
 export const CREATE_NEW_RECIPE='CREATE_NEW_RECIPE'
