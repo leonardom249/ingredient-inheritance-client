@@ -4,7 +4,7 @@ import { switchToLogin } from '../actions/actions';
 
 
 
-function LoginButton(props){
+export function LoginButton(props){
     return(
         <div className="register login">
             <p>Already Have An Account? </p>

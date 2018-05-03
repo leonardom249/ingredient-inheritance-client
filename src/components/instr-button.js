@@ -2,7 +2,7 @@ import React from 'react';
 import { toggleInstructionsOff } from '../actions/actions';
 import {connect} from 'react-redux';
 
-function InstructionButton(props){
+export function InstructionButton(props){
     return(
         <button className='form-button' id="centered-button"
             onClick={()=> props.dispatch(toggleInstructionsOff())}
