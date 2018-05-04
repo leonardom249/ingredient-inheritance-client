@@ -11,7 +11,6 @@ import {
     BACK_TO_LOGIN
 } from '../actions/auth';
 
-console.log('more of anything')
 let authToken = loadAuthToken();
 let currentUser;
 if(authToken){
@@ -36,7 +35,6 @@ export default (state = initialState, action) => {
         });
     } else if (action.type === CLEAR_AUTH) {
         clearAuthToken();
-        console.log('made it to clearAuth reducer/action')
         return Object.assign({}, state, {
             authToken: null,
             currentUser: null
@@ -47,7 +45,6 @@ export default (state = initialState, action) => {
             error: null
         });
     } else if (action.type === AUTH_SUCCESS) {
-        console.log(action.currentUser, action.userId);
         return Object.assign({}, state, {
             loading: false,
             currentUser: action.currentUser,

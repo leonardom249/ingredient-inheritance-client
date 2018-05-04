@@ -77,5 +77,5 @@ If the user is inactive for an hour, the app will log them out on the client sid
             "test": "react-scripts test --env=jsdom",
             "eject": "react-scripts eject"
         }
-    -npm start to start localhost:3030
+    -npm start to start dev client (default: localhost:3000)
     

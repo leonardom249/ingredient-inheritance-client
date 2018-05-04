@@ -13,10 +13,8 @@ import {connect} from 'react-redux';
 
 
 export function RecipePage (props) {
-    // console.log('recipe page', props.loggedIn);
     
     if(!props.loggedIn){
-        // console.log('hit redirect to / in recipe page');
         return <Redirect to='/'/>
     }
     

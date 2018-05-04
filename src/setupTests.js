@@ -8,7 +8,6 @@ global.localStorage={
     getItem:()=>{return authToken},
     removeItem:()=>{}
 }
-console.log('anything')
 
 //setup tests:
 Enzyme.configure({adapter: new Adapter()});

@@ -76,5 +76,3 @@ describe('backToLogin', () => {
         });
     });
 });
-
-////Test Async Actions below////

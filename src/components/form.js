@@ -11,7 +11,6 @@ import '../component-css/form.css';
 
 export class NotConnectedAddrecipeForm extends React.Component{ 
     componentDidMount(){
-        // console.log('form component did mount running, dispatching create New Recipe');
         this.props.dispatch(createNewRecipe());
     }
     
@@ -28,7 +27,6 @@ export class NotConnectedAddrecipeForm extends React.Component{
     }
     
     render(){
-        // console.log('form rendering, here are props in render', this.props)
         return(
             <form className="recipe-form"
                 onSubmit={this.props.handleSubmit(values =>

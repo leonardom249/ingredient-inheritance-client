@@ -16,19 +16,4 @@ describe('<recipeList />', () => {
         shallow(<recipeList recipes={testRecipes} dispatch={dispatch}/>);
     });
 
-
-    // it.only('Dispatches deleteRecipe', () => {
-    //     const dispatch = jest.fn();
-    //     const wrapper= mount(<recipeList recipes={testRecipes} dispatch={dispatch}/>);
-    //     console.log(wrapper.props());
-    //     console.log(wrapper.html());
-    //     console.log('childrens', wrapper.children())
-
-    //     const button= wrapper.find('.delete-button');
-    //     button.simulate('click');
-    //     expect(dispatch).toHaveBeenCalledWith(deleteRecipe(recipe._id));
-    // });
-
-    //Mentor Notes: WHHHYYYYY not sure how to do this^^ Trying to look into the 
-    //mapped over li's and get the button to click and test the dispatch
 });

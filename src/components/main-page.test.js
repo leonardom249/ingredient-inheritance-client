@@ -13,8 +13,5 @@ describe('<MainPage />', () => {
         const dispatch=jest.fn()
         shallow(<MainPage dispatch={dispatch}/>);
     });
-    // it('should call fetchrecipes during componentDidMount', () => {
-        
-    // });
-
+ 
 });

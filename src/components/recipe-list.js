@@ -7,12 +7,11 @@ import '../component-css/recipe-list.css';
 export class recipeList extends React.Component{ 
     
     render(){
-        console.log('recipe-list-props.recipes', this.props.recipes);
 
         const recipeList = this.props.recipes.map((recipe, index)=>{
             let title= recipe.title
             if(title.length>8){
-                title = title.substring(0,8);
+                title = title.substring(0,8) +'...';
             }
             return(
                 <li key={recipe._id}> 
@@ -22,7 +21,6 @@ export class recipeList extends React.Component{
                         onClick={(e)=>{
                             e.preventDefault();
                             this.props.dispatch(setInitialValues(recipe._id, recipe.title));
-                            console.log(this.props.initialValues)
                         }}
                     >
                         {`${title}   `}

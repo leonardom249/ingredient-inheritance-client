@@ -48,7 +48,6 @@ export const backToLogin = ()=>({
 
 const storeAuthInfo = (authToken, dispatch) => {
     const decodedToken = jwtDecode(authToken);//returns object with a user object containing fullname and user name
-    console.log(decodedToken.user);
     dispatch(setAuthToken(authToken));
     dispatch(authSuccess(decodedToken.user.username, decodedToken.user.userId));
     saveAuthToken(authToken);

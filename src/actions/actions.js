@@ -53,14 +53,6 @@ export const switchToLogin=()=>({
     type:SWITCH_TO_LOGIN,
 })
 
-// export const UPDATE_FULL_RECIPE='UPDATE_FULL_RECIPE'
-// export const updateFullRecipe=(id, title, ingredients, recipe)=>({
-//     type:UPDATE_FULL_RECIPE,
-//     id,
-//     title,
-//     ingredients,
-//     recipe
-// })
 
 export const LOAD='LOAD'
 export const load = data => ({ type: LOAD, data })
@@ -86,7 +78,6 @@ export const fetchrecipes =()=>(dispatch, getState)=>{
         .then(recipes=> dispatch(fetchrecipeSuccess(recipes)))
         .catch(err=> {
             console.log(err);
-            console.log('made it to fetch recipe catch err')
             dispatch(clearAuth())
             dispatch(backToLogin())
             dispatch(fetchrecipeError(err))
@@ -107,7 +98,6 @@ export const fetchrecipesForOtherFunctions =()=>(dispatch, getState)=>{
         .then(recipes=> dispatch(fetchrecipeSuccess(recipes)))
         .catch(err=> {
             console.log(err);
-            console.log('made it to fetch recipe catch err')
             dispatch(clearAuth())
             dispatch(backToLogin())
             dispatch(fetchrecipeError(err))
@@ -136,7 +126,6 @@ export const createRecipe = (title, ingredients, recipe) => (dispatch, getState)
             .then(res => normalizeResponseErrors(res))
             .then(res => res.json())
             .then(res=> dispatch(addrecipe(res)))
-            .then((body) => console.log(body))
             .catch(err => {
                 console.error(err)
             })
@@ -164,7 +153,6 @@ export const updateRecipePost=(id, title, ingredients, recipe)=> (dispatch, getS
         .then(res => normalizeResponseErrors(res))
         .then(res => res.json())
         .then(recipes=> dispatch(fetchrecipesForOtherFunctions()))
-        // .then((body) => console.log(body))
         .catch(err => console.error(err));
 }
 

@@ -17,13 +17,12 @@ class App extends Component {
            setTimeout(()=>{
                 console.log('times almost up');
                 this.props.dispatch(almostTimeout())
-                console.log(this.props.dialogAlert)
            },  57* 60* 1000)
 
             clearTimeout(timeOut);
            timeOut=
              setTimeout(()=>{
-                console.log('time')
+                console.log('timed out')
                 this.props.dispatch(clearAuth())
                 this.props.dispatch(backToLogin())
             }, 58 * 60* 1000)
