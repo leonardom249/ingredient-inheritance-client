@@ -17,7 +17,7 @@ class App extends Component {
            setTimeout(()=>{
                 console.log('times almost up');
                 this.props.dispatch(almostTimeout())
-           },  57* 60* 1000)
+           },  .1* 60* 1000)
 
             clearTimeout(timeOut);
            timeOut=
@@ -25,7 +25,7 @@ class App extends Component {
                 console.log('timed out')
                 this.props.dispatch(clearAuth())
                 this.props.dispatch(backToLogin())
-            }, 58 * 60* 1000)
+            }, .15 * 60* 1000)
         })
     }
 

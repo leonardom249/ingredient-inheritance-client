@@ -6,31 +6,43 @@ form.recipe-form {
     margin-left: 1px;
     padding-right: 5px;
     padding-left: 5px;
-    border: 3px solid black;
+    border: 3px solid #0B2905;
     border-radius: 20px;
-    background: #AD210B;
-    color: white;
-
-    /* max-width: 50em; */
+    background: #2C4417;
+    color: #B5B9A7;
     font-family: 'Playfair Display', sans-serif;
   }
 
 form.login-form{
     text-align: center;
-    margin-right: 1px;
-    margin-left: 1px;
+    max-width: 15em;
+    margin:10px auto;
     padding-right: 5px;
     padding-left: 5px;
-    border: 3px solid black;
+    border: 1px solid black;
     border-radius: 20px;
-    background: #AD210B;
-    font-weight: bold;
-    color:white;
-
-    /* max-width: 50em; */
+    background: 
+    linear-gradient(
+        rgba(255, 255, 255, 0.356),
+        rgba(255, 255, 255, 0.767)
+    );
+    font-weight: 700;
+    color:black;
     font-family: 'Playfair Display', sans-serif;
 }
+p.register-question{
+    background: 
+    linear-gradient(
+        rgba(255, 255, 255, 0.356),
+        rgba(255, 255, 255, 0.767)
+    );
+    margin-left: 20%;
+    margin-right: 20%;
+    padding-right: 5px;
+    padding-left: 5px;
+    border-radius: 20px;
 
+}
 #ingredients-size, #recipe-size{
     height:5em;
 }
@@ -52,13 +64,17 @@ div.register{
 
        }
        form.login-form { 
-        margin-right: 200px;
-        margin-left: 200px;
+        margin: 20px auto;
+        max-width: 20em;
         padding-right: 20px;
         padding-left: 20px;
        }
        #ingredients-size, #recipe-size{
         height:10em;
+    }
+    p.register-question{
+        margin-left: 25%;
+        margin-right: 25%;  
     }
 
 } 
@@ -71,8 +87,8 @@ div.register{
         padding-left: 50px;
        }
        form.login-form { 
-        margin-right: 250px;
-        margin-left: 250px;
+        margin: 30px auto !important;
+        max-width: 25em;
         padding-right: 50px;
         padding-left: 50px;
        }
@@ -89,4 +105,13 @@ div.register{
         padding-right: 50px;
         padding-left: 50px;
        }
+       form.login-form { 
+        margin: 0 auto;
+        padding-right: 0px;
+        padding-left: 0px;
+       }
+       p.register-question{
+        margin-left: 35%;
+        margin-right: 35%;  
+    }
 }

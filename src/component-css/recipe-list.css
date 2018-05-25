@@ -1,7 +1,7 @@
 div.recipe-list{
     margin: 10px;
     text-align: center;
-    border: 3px solid black;
+    border: 3px solid #0B2905;
     border-radius: 20px;
     background: linear-gradient(
         rgba(255, 255, 255, 0.767),

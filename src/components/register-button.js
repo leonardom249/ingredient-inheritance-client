@@ -5,7 +5,7 @@ import { switchToRegister } from '../actions/actions';
 export function RegisterButton(props){
     return(
         <div className="register">
-            <p>Don't Have An Account Yet?</p>
+            <p className='register-question'>Don't Have An Account Yet?</p>
             <button className='colored'
                 onClick={()=> props.dispatch(switchToRegister())}
             >
