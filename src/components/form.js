@@ -39,7 +39,6 @@ export class NotConnectedAddrecipeForm extends React.Component{
                     className="field"
                     type="text"
                     name="title"
-                    size="40"
                     id='title'
                     placeholder="Ex: Uncle Bob's Chili..."
                     validate={[required, nonEmpty]}
@@ -53,7 +52,6 @@ export class NotConnectedAddrecipeForm extends React.Component{
                     type="text"
                     name="ingredients"
                     placeholder="Ex: 6 cans crushed tomatoes..."
-                    cols="40"
                     validate={[required, nonEmpty]}
                     id="ingredients-size"
 
@@ -68,7 +66,6 @@ export class NotConnectedAddrecipeForm extends React.Component{
                     name="recipe"
                     placeholder="Ex: Step 1. Crush garlic"
                     id="recipe-size"
-                    cols="40"
                     validate={[required, nonEmpty]}
 
                 />
