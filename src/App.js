@@ -26,7 +26,7 @@ class App extends Component {
                 this.props.dispatch(clearAuth())
                 this.props.dispatch(backToLogin())
             }, 58 * 60* 1000)
-        })      
+        })
     }
 
   componentDidUpdate(prevProps) {
