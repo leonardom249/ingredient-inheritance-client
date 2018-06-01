@@ -25,8 +25,8 @@ class App extends Component {
                 console.log('timed out')
                 this.props.dispatch(clearAuth())
                 this.props.dispatch(backToLogin())
-            }, .15 * 60* 1000)
-        })
+            }, 58 * 60* 1000)
+        })      
     }
 
   componentDidUpdate(prevProps) {
