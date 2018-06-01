@@ -3,10 +3,12 @@ div.instructions h1{
 }
 
 div.instructions li{
-    margin-top:5px;
-    margin-bottom:5x;
+    /* margin-top:5px;
+    margin-bottom:5x; */
     padding-bottom: 5px;
     padding-top: 5px;
+    margin: 0 auto;
+    width: 75%;
 
 
 }
@@ -15,8 +17,8 @@ button #centered-button{
 }
 
 div.instructions ol{
-    text-align: left;
-    margin-right: 10px
+    text-align: center;
+    list-style-type: none;
 }
 
 li.instr-title1{
@@ -42,7 +44,7 @@ li.instr-title2{
 
 li.warning{
     background: beige;
-    color:#AD210B;
+    color:#8A0200;
     padding-left: 5px;
     padding-right: 5px;
     border: 3px solid black;
@@ -51,10 +53,15 @@ li.warning{
 }
 
 div.instructions{
-    margin: 10px;
-    background: #AD210B;
-    color:white;
+    background: 
+    linear-gradient(
+        rgba(255, 255, 255, 0.356),
+        rgba(255, 255, 255, 0.767)
+    );
+    color:black;
     font-family: 'Playfair Display', sans-serif;
+    margin: 0 auto;
+    max-width: 50em;
 }
 
 @media only screen and (min-width: 768px) {

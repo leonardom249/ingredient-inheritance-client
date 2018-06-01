@@ -15,11 +15,23 @@ header div  {
 }
 
 header h1 {
-    width: 100%
+    width: 100%;
+    background: 
+    linear-gradient(
+        rgba(255, 255, 255, 0.356),
+        rgba(255, 255, 255, 0.767)
+    );
+    border-radius: 50%;
 }
 
 em{
-    font-weight: bold
+    font-weight: bold;
+    background: 
+    linear-gradient(
+        rgba(255, 255, 255, 0.356),
+        rgba(255, 255, 255, 0.767)
+    );
+    border-radius: 50%;
 }
 
 

@@ -7,7 +7,7 @@ import { switchToLogin } from '../actions/actions';
 export function LoginButton(props){
     return(
         <div className="register login">
-            <p>Already Have An Account? </p>
+            <p className='login-question'>Already Have An Account? </p>
             <button className="colored"
                 onClick={()=> props.dispatch(switchToLogin())}
             >

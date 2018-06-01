@@ -6,10 +6,13 @@ form.recipe-form {
     margin-left: 1px;
     padding-right: 5px;
     padding-left: 5px;
-    border: 3px solid #0B2905;
     border-radius: 20px;
-    background: #2C4417;
-    color: #B5B9A7;
+    background: 
+    linear-gradient(
+        rgba(255, 255, 255, 0.356),
+        rgba(255, 255, 255, 0.767)
+    );
+    color: black;
     font-family: 'Playfair Display', sans-serif;
   }
 
@@ -30,7 +33,7 @@ form.login-form{
     color:black;
     font-family: 'Playfair Display', sans-serif;
 }
-p.register-question{
+p.register-question, p.login-question{
     background: 
     linear-gradient(
         rgba(255, 255, 255, 0.356),
@@ -41,6 +44,7 @@ p.register-question{
     padding-right: 5px;
     padding-left: 5px;
     border-radius: 20px;
+    font-weight: 700;
 
 }
 #ingredients-size, #recipe-size{
@@ -72,7 +76,7 @@ div.register{
        #ingredients-size, #recipe-size{
         height:10em;
     }
-    p.register-question{
+    p.register-question, p.login-question{
         margin-left: 25%;
         margin-right: 25%;  
     }
@@ -111,7 +115,7 @@ div.register{
         padding-right: 0px;
         padding-left: 0px;
        }
-       p.register-question{
+       p.register-question, p.login-question{
         margin-left: 35%;
         margin-right: 35%;  
     }
