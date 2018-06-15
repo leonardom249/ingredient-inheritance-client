@@ -12,16 +12,13 @@ div.instructions li{
 
 
 }
-button #centered-button{
-    text-align: center;
-}
 
 div.instructions ol{
     text-align: center;
     list-style-type: none;
 }
 
-li.instr-title1{
+li.instr-title1, li.instr-title2{
     background: beige;
     color:black;
     padding-left: 5px;
@@ -30,17 +27,6 @@ li.instr-title1{
     border-radius: 10px;
     text-align: center;
 }
-
-li.instr-title2{
-    background: black;
-    color:white;
-    padding-left: 5px;
-    padding-right: 5px;
-    border: 3px solid white;
-    border-radius: 10px;
-    text-align: center;
-}
-
 
 li.warning{
     background: beige;
