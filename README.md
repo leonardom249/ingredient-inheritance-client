@@ -3,10 +3,11 @@ Made using React.js and Node.js, complete with testing.
 Node.js backend found here: [Ingredient Inheritance Server Github](https://github.com/thinkful-ei19/megan-ing-inheritance-server)
 
 ## Table of Contents:
--Description
--Link to Deployed Version
--Brief Overview of Components
--Instructions
+* Description
+* Link to Deployed Version
+* Screenshots
+* Brief Overview of Components
+* Instructions
 
 ### Description:
 Ingredient Inheritance is a web app made to store secret family recipes. It is a password-protected site with protected endpoints so that users are only able to view their own recipes/no one outside the family can see them.
@@ -18,7 +19,16 @@ As long as the user remains active on the page, their JWT will automatically ref
 If the user is inactive for an hour, the app will log them out on the client side, not refresh their JWT on the server side, and also prompt them 1 minute before the logout.  However, if they click the "Stay on Page" button in the prompt, the client will send off the request to refresh their JWT and the user will be able to remain on the page.
 
 ### Link to Deployed Version:
-[Ingredient Inheritance](https://vigilant-leakey-ceaa26.netlify.com/)
+[Ingredient Inheritance](https://ingredient-inheritance.netlify.com/)
+
+### Screenshots:
+
+![ing-inh](https://user-images.githubusercontent.com/35779012/42347578-ea776b02-806b-11e8-9e09-5891195e7700.jpg)
+
+![ing-inh-instructions](https://user-images.githubusercontent.com/35779012/42347580-ebad2a84-806b-11e8-82fa-323201c49604.jpg)
+
+![ing-inh-loggedin](https://user-images.githubusercontent.com/35779012/42347584-edb9b2d4-806b-11e8-9ef6-02aa8bf6cc1c.jpg)
+
 
 ### Brief Overview of Components:
 
