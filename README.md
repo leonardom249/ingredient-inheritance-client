@@ -8,6 +8,7 @@ Node.js backend found here: [Ingredient Inheritance Server Github](https://githu
 * Screenshots
 * Brief Overview of Components
 * Instructions
+* Tech Used
 
 ### Description:
 Ingredient Inheritance is a web app made to store secret family recipes. It is a password-protected site with protected endpoints so that users are only able to view their own recipes/no one outside the family can see them.
@@ -88,4 +89,21 @@ If the user is inactive for an hour, the app will log them out on the client sid
             "eject": "react-scripts eject"
         }
     -npm start to start dev client (default: localhost:3000)
+    
+###Tech Used
+
+#### Front-End
+* React
+* Redux
+* HTML
+* CSS
+
+#### Back-End
+* Node
+* Express
+* MongoDB
+* Mongoose
+* Passport
+* Bcrypt
+
     
