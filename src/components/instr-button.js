@@ -4,7 +4,7 @@ import {connect} from 'react-redux';
 
 export function InstructionButton(props){
     return(
-        <button className='form-button' id="centered-button"
+        <button className='colored'
             onClick={()=> props.dispatch(toggleInstructionsOff())}
         >
         Back To Recipes</button>

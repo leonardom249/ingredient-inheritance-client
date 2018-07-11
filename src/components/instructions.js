@@ -1,9 +1,20 @@
 import React from 'react';
 import InstructionButton from './instr-button';
 import '../component-css/instructions.css';
+import Header from "./header"
+import LogoutButton from './logout-button';
 
 export default function Instructions (){
     return(
+        <div>
+            <div className="top-background">
+                <Header/>
+                <nav>
+                    <InstructionButton/>
+                    <LogoutButton/>
+
+                </nav>
+            </div>
         <div className="instructions">
             <h1>Things You Can Do:</h1>
             <ul>
@@ -30,9 +41,9 @@ export default function Instructions (){
                 </li>
             </ul>
             {/* <div className="instruction-button-div"> */}
-                <InstructionButton/>
             {/* </div> */}
 
+        </div>
         </div>
     )
 }
