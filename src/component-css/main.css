@@ -93,6 +93,7 @@ button.form-button{
     font-family: 'Playfair Display', sans-serif;
     text-shadow: 1px 1px 0 #444;
     border-radius: 5px;
+    margin:0 auto;
 }
 
 button.delete-button {
@@ -102,6 +103,12 @@ button.delete-button {
     color: #fff!important;
     text-shadow: 1px 1px 0 #444;
     margin-left: 20px;
+}
+
+.recipe-form-list{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 
  

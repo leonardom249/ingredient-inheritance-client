@@ -29,7 +29,9 @@ export default function Instructions (){
                     <strong>*WARNING: At this time, hitting the "X" button will PERMANENTLY DELETE your recipe</strong>
                 </li>
             </ul>
-            <InstructionButton/>
+            {/* <div className="instruction-button-div"> */}
+                <InstructionButton/>
+            {/* </div> */}
 
         </div>
     )

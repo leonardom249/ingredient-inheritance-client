@@ -1,10 +1,23 @@
+div.instructions{
+    background: 
+    linear-gradient(
+        rgba(255, 255, 255, 0.356),
+        rgba(255, 255, 255, 0.767)
+    );
+    color:black;
+    font-family: 'Playfair Display', sans-serif;
+    margin: 0 auto;
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 div.instructions h1{
     text-align: center;
 }
 
 div.instructions li{
-    /* margin-top:5px;
-    margin-bottom:5x; */
     padding-bottom: 5px;
     padding-top: 5px;
     margin: 0 auto;
@@ -15,7 +28,6 @@ div.instructions li{
 
 div.instructions ol{
     text-align: center;
-    list-style-type: none;
 }
 
 li.instr-title1, li.instr-title2{
@@ -38,21 +50,5 @@ li.warning{
     text-align: center;
 }
 
-div.instructions{
-    background: 
-    linear-gradient(
-        rgba(255, 255, 255, 0.356),
-        rgba(255, 255, 255, 0.767)
-    );
-    color:black;
-    font-family: 'Playfair Display', sans-serif;
-    margin: 0 auto;
-    max-width: 50em;
-}
 
-@media only screen and (min-width: 768px) {
-    li.warning{
-        padding-left: 20px;
-        text-align: center;
-    }
-}
+

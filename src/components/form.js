@@ -71,8 +71,9 @@ export class NotConnectedAddrecipeForm extends React.Component{
                 />
             </label>
 
-                <br/>
-                <button className='form-button'  type="submit">Save</button>
+                <div className="form-button-div">
+                    <button className='form-button'  type="submit">Save</button>
+                </div>
             </form>
         )
     }
