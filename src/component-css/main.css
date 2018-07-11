@@ -21,11 +21,9 @@ div.top-background{
     border: 5px solid black;
     background: 
     linear-gradient(
-        rgba(255, 255, 255, 0.356),
-        rgba(255, 255, 255, 0.767)
-    ),
-    url('https://image.freepik.com/free-vector/gingham-style-background_1048-2586.jpg');
-    background-repeat: repeat;
+        rgba(138, 2, 0, 0.85),
+        rgba(255, 255, 255, 0.85)
+    );
 }
 
 

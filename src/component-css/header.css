@@ -16,22 +16,12 @@ header div  {
 
 header h1 {
     width: 100%;
-    background: 
-    linear-gradient(
-        rgba(255, 255, 255, 0.356),
-        rgba(255, 255, 255, 0.767)
-    );
-    border-radius: 50%;
+    color: black;
 }
 
 em{
     font-weight: bold;
-    background: 
-    linear-gradient(
-        rgba(255, 255, 255, 0.356),
-        rgba(255, 255, 255, 0.767)
-    );
-    border-radius: 50%;
+    color: rgba(22, 21, 21, 0.75);
 }
 
 
@@ -49,7 +39,4 @@ em{
     }
 } 
 
- @media only screen and (min-width: 992px) {
-  
-}
  
