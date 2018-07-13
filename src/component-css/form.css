@@ -61,9 +61,20 @@ input#title, textarea{
     
 }
 
+input#title{
+    height:50px;
+}
+
+textarea{
+    height:250px!important;
+}
+
 div.register{
     text-align: center;
+}
 
+.save{
+    margin-bottom: 20px !important;
 }
  
 
@@ -85,6 +96,13 @@ div.register{
     p.register-question, p.login-question{
         margin-left: 25%;
         margin-right: 25%;  
+    }
+
+    input#title{
+        height:30px;
+    }
+    textarea{
+        height:150px!important;
     }
 
 } 

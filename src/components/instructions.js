@@ -20,7 +20,7 @@ export default function Instructions (){
             <ul>
                 <li className="instr-title1"><strong>Create and save your own recipes for people to enjoy</strong>
                     <ol>
-                        <li>Click the "+Create New Recipe" button, or just type in the blank form</li>
+                        <li>Type in the blank form</li>
                         <li>Fill out the form with all your ingredients, a title, and recipe steps</li>
                         <li>Hit the "Save" button at the bottom</li>
                     </ol>

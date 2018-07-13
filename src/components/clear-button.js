@@ -4,7 +4,7 @@ import {connect} from 'react-redux';
 import {reset} from 'redux-form';
 
 
-export function CreateButton(props){
+export function ClearButton(props){
     
     return(
         <button className='colored'
@@ -14,8 +14,8 @@ export function CreateButton(props){
                     props.dispatch(reset('recipe'));
                 }}
         >
-        +Create New Recipe</button>
+        Clear Form</button>
     )
  
 }
-export default connect()(CreateButton)
+export default connect()(ClearButton)

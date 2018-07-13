@@ -3,16 +3,16 @@ import {shallow} from 'enzyme';
 import { createNewRecipe } from '../actions/actions';
 import {reset} from 'redux-form';
 
-import {CreateButton} from './create-button';
+import {ClearButton} from './clear-button';
 
-describe('<CreateButton />', () => {
+describe('<ClearButton />', () => {
     it('Renders without crashing', () => {
-        shallow(<CreateButton />);
+        shallow(<ClearButton />);
     });
 
     it('Dispatches createNewRecipe', () => {
         const dispatch = jest.fn();
-        const wrapper= shallow(<CreateButton dispatch={dispatch}/>);
+        const wrapper= shallow(<ClearButton dispatch={dispatch}/>);
         const button= wrapper.find('.colored');
         button.simulate('click');
         expect(dispatch).toHaveBeenCalledWith(createNewRecipe());
@@ -20,7 +20,7 @@ describe('<CreateButton />', () => {
 
     it('Dispatches reset(recipe)', () => {
         const dispatch = jest.fn();
-        const wrapper= shallow(<CreateButton dispatch={dispatch}/>);
+        const wrapper= shallow(<ClearButton dispatch={dispatch}/>);
         const button= wrapper.find('.colored');
         button.simulate('click');
         expect(dispatch).toHaveBeenCalledWith(reset('recipe'));
