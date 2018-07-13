@@ -88,6 +88,17 @@ button.colored {
     text-shadow: 1px 1px 0 #444;
 }
 
+.link{
+    margin-right:5px;
+    margin-left: 5px;
+    min-width: 100px;
+    width:100%
+}
+.links{
+    margin-right: 15px;
+    margin-left: 15px;
+}
+
 button.form-button{
     width: 75%;
     margin-bottom: 10px;
