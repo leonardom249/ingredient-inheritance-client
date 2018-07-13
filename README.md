@@ -5,6 +5,7 @@ Node.js backend found here: [Ingredient Inheritance Server Github](https://githu
 ## Table of Contents:
 * Description
 * Link to Deployed Version
+* Api Documentation
 * Screenshots
 * Brief Overview of Components
 * Instructions
@@ -21,6 +22,17 @@ If the user is inactive for an hour, the app will log them out on the client sid
 
 ### Link to Deployed Version:
 [Ingredient Inheritance](https://ingredient-inheritance.netlify.com/)
+
+### API Documentation:
+
+* /login creates auth token
+* /refresh refreshes auth token before it expires
+* /users creates a new user based on username and password from request body
+* /recipes get request gets all recipes for a specific user based on userId
+* /recipes post request posts a new recipe based on a users id
+* /recipes/:id get request gets a specific recipe based on recipe id (in params) and userId
+* /recipes/:id put request updates a specific recipe based on recipe id (in params) and userID
+* /recipes/:id delete request deletes a specific recipe based on recipe id (in params) and userId
 
 ### Screenshots:
 
