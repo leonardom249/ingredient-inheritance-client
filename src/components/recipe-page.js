@@ -16,7 +16,7 @@ import {connect} from 'react-redux';
 export function RecipePage (props) {
     
     if(!props.loggedIn){
-        return <Redirect to='/'/>
+        return <Redirect to='/login'/>
     }
     
     return(

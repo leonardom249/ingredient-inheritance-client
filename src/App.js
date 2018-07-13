@@ -4,6 +4,7 @@ import HomeLoginPage from './components/home-login-page';
 import {Route, withRouter} from 'react-router-dom';
 import {connect} from 'react-redux';
 import {refreshAuthToken, clearAuth, almostTimeout, backToLogin} from './actions/auth';
+import LandingPage from './components/landing-page';
 
 
 class App extends Component {
@@ -61,7 +62,8 @@ class App extends Component {
     
     return(
       <div className="full-app">
-        <Route exact path='/' component={HomeLoginPage} />
+        <Route exact path='/' component={LandingPage} />
+        <Route exact path='/login' component={HomeLoginPage} />
         <Route exact path='/mainpage' component={MainPage}/>
       </div>
     )
