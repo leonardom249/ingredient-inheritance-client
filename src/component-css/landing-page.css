@@ -1,0 +1,29 @@
+.landing-page{
+    width: 85%;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    padding-right: 10px;
+    padding-left: 5px;
+    border-radius: 20px;
+    background: 
+    linear-gradient(
+        rgba(255, 255, 255, 0.356),
+        rgba(255, 255, 255, 0.767)
+    );
+    color: black;
+    font-family: 'Playfair Display', sans-serif;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.tagline{
+    font-size: 15px;
+}
+
+h2.landing-title{
+    font-size: 30px;
+    text-decoration: underline;
+}

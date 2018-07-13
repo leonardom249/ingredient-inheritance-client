@@ -2,6 +2,7 @@ import React from 'react';
 import {Redirect, Link} from 'react-router-dom';
 import Header from './header';
 import '../component-css/main.css';
+import '../component-css/landing-page.css';
 import { switchToRegister } from '../actions/actions';
 
 
@@ -20,7 +21,14 @@ export function LandingPage (props) {
                 </nav>
         </div>
         <div className="landing-page">
-           <h2>Hello and welcome to Ingredient Inheritance</h2>
+            <h2 className="landing-title">Welcome to Ingredient Inheritance</h2>
+            <p className="landing-p">
+              This web app was built as a way to store secret family recipes.  By being a password protected site, you are able to safely store your favorite delicious homecooked secrets while having peace of mind that no one else has access to them.  Please login or register via the buttons above to continue.
+            </p>
+            <h3>Happy Cooking!</h3>
+            <p className="landing-p tagline">
+              Created 2018 by Megan Leonardo
+            </p>
         </div>
 
       </div>
