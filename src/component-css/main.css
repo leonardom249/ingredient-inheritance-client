@@ -70,6 +70,19 @@ a:active {
 a.go-to-recipes{
     color:white;
     text-decoration: none;
+    
+}
+
+.go-to{
+    width: 200px;
+    margin:0 auto;
+    margin-bottom: 10px;
+    background-color:#8A0200; 
+    color: #fff !important;
+    font-size: 100%;
+    font-family: 'Playfair Display', sans-serif;
+    text-shadow: 1px 1px 0 #444;
+    border-radius: 5px;
 }
 
 button {
@@ -78,7 +91,7 @@ button {
 }
 
 button.colored {
-    width: 50%;
+    width: 200px!important;
     margin: 0 auto;
     margin-bottom: 10px;
     background-color:#8A0200;
@@ -100,7 +113,7 @@ button.colored {
 }
 
 button.form-button{
-    width: 75%;
+    width: 200px;
     background-color:#8A0200; 
     color: #fff !important;
     font-weight: 700;
@@ -131,9 +144,6 @@ button.delete-button {
  
 
 @media only screen and (min-width: 768px) {
-    button.colored  {
-        width: 20%
-    }
     
     button.delete-button {
         width: 10%

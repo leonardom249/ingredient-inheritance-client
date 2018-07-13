@@ -5,11 +5,11 @@ import {connect} from 'react-redux';
 export function GoToRecipesButton(props){
     
     return(
-        <button className='colored'>
             <a className="go-to-recipes" href="#saved-recipes">
+            <button className="go-to">
                 Go To Recipes
+                </button>
             </a>
-        </button>
     )
  
 }
