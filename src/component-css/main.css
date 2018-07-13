@@ -101,7 +101,6 @@ button.colored {
 
 button.form-button{
     width: 75%;
-    margin-bottom: 10px;
     background-color:#8A0200; 
     color: #fff !important;
     font-weight: 700;
@@ -110,6 +109,8 @@ button.form-button{
     text-shadow: 1px 1px 0 #444;
     border-radius: 5px;
     margin:0 auto;
+    margin-bottom: 20px;
+    margin-top: 10px;
 }
 
 button.delete-button {

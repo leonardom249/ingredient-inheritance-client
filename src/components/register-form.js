@@ -27,13 +27,14 @@ export class RegistrationForm extends React.Component {
                     this.onSubmit(values)
                 )}>
                 <label htmlFor="fullName">Full Name:
-                <Field component={Input} type="text" name="fullName" />
+                <Field component={Input} type="text" id="fullName" name="fullName" />
                 </label>
                 <label htmlFor="register username">Username
                 <Field
                     component={Input}
                     type="text"
                     name="username"
+                    id="username"
                     validate={[required, nonEmpty, trimmed]}
                 />
                 </label>
@@ -42,14 +43,16 @@ export class RegistrationForm extends React.Component {
                     component={Input}
                     type="password"
                     name="password"
+                    id="password"
                     validate={[required, passwordLength, trimmed]}
                 />
                 </label>
-                <label htmlFor="passwordConfirm">Confirm password
+                <label htmlFor="passwordConfirm">Confirm Password
                 <Field
                     component={Input}
                     type="password"
                     name="passwordConfirm"
+                    id="confirm"
                     validate={[required, nonEmpty, matchesPassword]}
                 />
                 </label>
