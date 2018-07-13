@@ -37,6 +37,8 @@ nav {
     text-align: center;
     display: flex;
     justify-content: center;
+    flex-direction: column;
+
 }
 
 nav button {
@@ -55,8 +57,6 @@ a:link {
     text-decoration: none;
     color: black;
     font-family: 'Playfair Display', sans-serif;
-
-
 }
 
 a:hover {
@@ -65,6 +65,11 @@ a:hover {
 
 a:active {
     text-decoration: underline;
+}
+
+a.go-to-recipes{
+    color:white;
+    text-decoration: none;
 }
 
 button {
@@ -120,6 +125,10 @@ button.delete-button {
     
     button.delete-button {
         width: 10%
+    }
+
+    nav{
+        flex-direction: row;
     }
 } 
 

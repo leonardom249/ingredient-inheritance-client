@@ -6,6 +6,7 @@ import LogoutButton from './logout-button';
 import AddRecipeForm from './form';
 import RecipeList from './recipe-list';
 import ClearButton from './clear-button';
+import GoToRecipeButton from './go-to-recipe-button'
 import '../component-css/main.css';
 
 
@@ -24,6 +25,7 @@ export function RecipePage (props) {
                 <Header/>
             <nav>
                 <Button/>
+                <GoToRecipeButton />
                 <ClearButton />
                 <LogoutButton/>
 
